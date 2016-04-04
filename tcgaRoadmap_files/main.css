@@ -1,0 +1,33 @@
+
+.disease {
+  fill : goldenrod;
+  stroke-width : 1.5px;
+  stroke : #777;
+}
+
+.platform {
+  fill : dodgerblue;
+  stroke-width : 1.5px;
+  stroke : #777;
+}
+
+.link {
+  fill : none;
+  stroke : #aaa;
+  stroke-width : 1.5px;
+}
+
+text.nodeLabel {
+  fill : black;
+}
+
+.active {
+  stroke : red;
+  stroke-width : 2.5px;
+}
+
+text.active {
+  stroke : #777;
+  stroke-width : 0;
+  fill : red;
+}
