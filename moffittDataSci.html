@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Moffitt Data Sci</title>
+
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Jonas Almeida" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <!--
+
+        Impress.js doesn't depend on any external stylesheet. Script adds all styles it needs for
+        presentation to work.
+
+        This style below contains styles only for demo presentation. Browse it to see how impress.js
+        classes are used to style presentation steps, or how to apply fallback styles, but I don't want
+        you to use them directly in your presentation.
+
+        Be creative, build your own. We don't really want all impress.js presentations to look the same,
+        do we?
+
+        When creating your own presentation get rid of this file. Start from scratch, it's fun!
+
+    -->
+    <link href="css/impress-demo.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<!--
+
+    Body element is used by impress.js to set some useful class names, that will allow you to detect
+    the support and state of the presentation in CSS or other scripts.
+
+    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
+    support features required by impress.js, so you should apply some fallback styles in your CSS.
+    It's not necessary to add it manually on this element. If the script detects that browser is not
+    good enough it will add this class, but keeping it in HTML means that users without JavaScript
+    will also get fallback styles.
+
+    When impress.js script detects that browser supports all required features, this class name will
+    be removed.
+
+    The class name on body element also depends on currently active presentation step. More details about
+    it can be found later, when `hint` element is being described.
+
+-->
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!--
+
+    Now that's the core element used by impress.js.
+
+    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
+    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
+
+    You probably won't need it now, but there are some configuration options that can be set on this element.
+
+    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
+    a number of ms. It defaults to 1000 (1s).
+
+    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
+    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
+    If you are willing to change this value make sure you understand how CSS perspective works:
+    https://developer.mozilla.org/en/CSS/perspective
+
+    But as I said, you won't need it for now, so don't worry - there are some simple but interesing things
+    right around the corner of this tag ;)
+
+-->
+<div id="impress">
+
+    <!--
+
+        Here is where interesting thing start to happen.
+
+        Each step of the presentation should be an element inside the `#impress` with a class name
+        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+        the 'camera' shows them on each step of the presentation.
+
+        Positioning information is passed through data attributes.
+
+        In the example below we only specify x and y position of the step element with `data-x="-1000"`
+        and `data-y="-1500` attributes. This means that **the center** of the element (yes, the center)
+        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+
+        It will not be rotated or scaled.
+
+    -->
+    <div id="abstract" class="step slide" data-x="-0000" data-y="-1500" data-z="3000" data-scale="1">
+        <table><tr><td>
+            <p style="color:maroon;font-size:xx-large">Data in the Cloud, analyze thyself!  <a style="color:blue;font-size:large" href="https://bit.ly/nciDataSci">(<span style="background-color:yellow"> b i t . l y / n c i D a t a S c i </span>)</a> <a  style="color:blue;font-size:large" href="#theEnd">[X]</a></p> 
+            <p style="font-size:large;color:maroon;line-height:140%">Hands-on discussion of research on participated data-driven computational ecosystems and how they may contribute to DCEG’s mission.</span><br>&nbsp;</p>
+            <p style="color:blue;font-size:large;line-height:140%"><a href="http://jonasalmeida.info" target="_blank"><span style="font-size:x-large">Jonas S Almeida, PhD</span> (<span style="background-color:yellow"> j o n a s a l m e i d a . i n f o </span>)</a> [<a style="background-color:yellow" target="_blank" href="https://www.ncbi.nlm.nih.gov/myncbi/browse/collection/42473640/?sort=date&direction=descending">myNCBI</a>]<br> Dept Biomedical Informatics, Professor, Chief Technology Officer,<br> Stony Brook University (SUNY), NY.</p>
+        </td><td style="vertical-align:top">
+            <img src="qrNciDataSci.jpg" width="200">
+        </td></tr></table>
+        <hr>
+        <p style="color:navy;font-size:large;font-family:courier;line-height:140%">
+        [1] Showcase recent software engineering research at the <b style="color:blue">intersection of Cloud-based data-intensive architectures and the pervasive Web Platform</b> a tour of user-facing examples such as <a style="background-color:yellow" href="https://bit.ly/KMestimator" target="_blank">bit.ly/KMestimator</a> and <a style="background-color:yellow" href="https://bit.ly/imageBoxAMIA2016" target="_blank">bit.ly/imageBoxAMIA2016</a> and <a style="background-color:yellow" href="https://github.com/mathbiol/openHealth" target="_blank">github.com/mathbiol/openHealth</a>. 
+        [2] The data-driven trajectory leading to this architecture started with model-driven metabolic pathway modelling, eventually derailed by the challanges of Personalized Medicine approaches to the analysis of TCGA data (Machine Learning). 
+        [3] As exemplified by SPORE awards, with Big Data comes Big Governance, can code travel through it? Two papers in Nature Biotechnology started a line of research to find a way <a href="https://en.wikipedia.org/wiki/s3db" target="_blank" style="background-color:yellow">wikipedia.org/wiki/s3db</a>.
+        [4] <b style="color:blue">Infrastructure for data intensive analytics</b> is increasingly that Cloud Computing for the Planet of the Apps - the API Economy.
+        <!--project and the ensuing work for SPORE awards described in en.wikipedia.org/wiki/s3db. Assuming the Committee wants to test my algorithm identification edge, I’ll then introduce the work I’ve been doing on data-intensive alignment-free sequence analysis, an area I helped start with a 2003 paper with that title (the first reference of en.wikipedia.org/wiki/Alignment-free_sequence_analysis). This work is now finding many serverless applications (sometimes described as function-as-a-service, FaaS) to BigData Computational Genomics such as mathbiol.github.io/vcfProto. If, along the way, the Committee shows signs of wanting to hear more about organizational work at NSF’s Data Science working group, and, in particular, the culture change challenges that come with it, I’ll take a detour towards the content of a recent Gartner report about deploying the “Bimodal IT Model”. This Feb 2017 report describes how this was achieved in practice at Stony Brook University Medical Center with the leadership of a very rare CIO.</p>-->
+        <hr>
+        <p style="color:black;font-size:medium;line-height:140%"><b>Link sampler:</b><br> <a href="http://bit.ly/pqiSuffolk" target="_blank" style="background-color:yellow">http://bit.ly/pqiSuffolk</a>, <a href="http://bit.ly/tcgascope" target="_blank" style="background-color:yellow">http://bit.ly/tcgascope</a>, <a href="http://bit.ly/healthBit" target="_blank" style="background-color:yellow">http://bit.ly/healthBit</a>, <a href="https://sbu-bmi.github.io/featurescape/u24Preview.html" target="_blank" style="background-color:yellow">https://sbu-bmi.github.io/featurescape/u24Preview.html</a>, <a href="https://sbu-bmi.github.io/featurescape/fig4.html" target="_blank" style="background-color:yellow">https://sbu-bmi.github.io/featurescape/fig4.html</a>, <a href="http://sbu-bmi.github.io/imagebox" target="_blank" style="background-color:yellow">http://sbu-bmi.github.io/imagebox</a>, <a href="http://vcf2rdf.org/" target="_blank" style="background-color:yellow">http://vcf2rdf.org</a>, <a href="https://bit.ly/vcfmrsa" target="_blank" style="background-color:yellow">bit.ly/vcfmrsa</a>,<a href="https://code.cerner.com/developer/smart-on-fhir/apps" target="_blank" style="background-color:yellow">SMART on FHIR</a>, <a href="http://quip1.uhmc.sunysb.edu/" target="_blank" style="background-color:yellow">quip1.uhmc.sunysb.edu</a>, <a href="http://bit.ly/sparcs2012" target="_blank" style="background-color:yellow">bit.ly/sparcs2012</a>.</p>
+    </div>
+
+    <div id="architecture1" class="step slide" data-x="-1000" data-y="-1500" data-z="3000" data-scale="1">
+        <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / n c i D a t a S c i</a></p>
+        <p align="center"><img src="HIPAAinfrastructure.png"></p>
+    </div>
+
+    <div id="architecture2" class="step slide" data-x="-1000" data-y="-1500" data-z="1500" data-scale="1">
+        <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / n c i D a t a S c i</a></p>
+        <p align="center"><img src="APIrUs.png"></p>
+    </div>
+    <div id="architecture3" class="step slide" data-x="-1000" data-y="-1500" data-z="4500" data-scale="1">
+        <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / n c i D a t a S c i</a></p>
+        <p align="center"><img src="SBUmobile.png"></p>
+    </div>
+
+    <div id="architecture4" class="step slide" data-x="0" data-y="-1500" data-z="4500" data-scale="1">
+        <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / n c i D a t a S c i</a></p>
+        <p align="center"><img src="OpenHealthBrowser.png"></p>
+    </div>
+
+    <div id="nci1" class="step slide" data-x="-0000" data-y="-1500">
+        <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / n c i D a t a S c i</a></p>
+        <p style="color:navy;font-size:large;font-family:courier;line-height:140%">
+        [1] Showcase recent software engineering research at the <b style="color:blue">intersection of Cloud-based data-intensive architectures and the pervasive Web Platform</b> a tour of user-facing examples such as <a style="background-color:yellow" href="https://bit.ly/KMestimator" target="_blank">bit.ly/KMestimator</a>, <a style="background-color:yellow" href="https://bit.ly/imageBoxAMIA2016" target="_blank">bit.ly/imageBoxAMIA2016</a> and <a style="background-color:yellow" href="https://github.com/mathbiol/openHealth" target="_blank">github.com/mathbiol/openHealth</a>. An extreme version of versioned hosting could blur the distinction between an App store and code versioning: versioned hosting, such as <a style="background-color:yellow" target="_blank" href="https://sbu-bmi.github.io">sbu-bmi.github.io</a>.
+        </p>
+        
+        <hr style="border-color:navy">
+        <p>&nbsp;</p>
+        <div id="summary">
+        <p style="color:navy;font-size:20px">
+            The emergence of the <a href="http://www.webplatform.org/" target="_blank">Web Platform</a> as the dominant vehicle for consumer informatics has created opportunities for disseminating research applications at a truly global scale, and in a manner that ...
+            <br>&nbsp;
+            <ol>
+                <li style="color:maroon;font-size:20px">a) Persists in time with versioned hosting.</li>
+                <li style="color:maroon;font-size:20px">b) Requires minimal maintenance.</li>
+                <li style="color:maroon;font-size:20px">c) Delivers reproducible analysis.</li>
+                <li style="color:maroon;font-size:20px">d) Is safer than the conventional model where data leaves the original hosting environment.</li>
+            </ol>
+            &nbsp;
+            <p style="color:navy;font-size:20px">
+                ... where everybody is a consumer or a producer (often both) of a REST APIs.
+            </p>
+        </p>
+        </div>
+    </div>
+
+    <div id="bestPaper" class="step slide" data-x="1000" data-y="-1800">
+        <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / n c i D a t a S c i</a></p>
+        <p align="center"><img src="bestPaperAmia2017.jpg" width="100%"></p>
+    </div>    
+
+    <div id="bigPic" class="step slide" data-x="1000" data-y="-1000">
+        <p style="text-align:right;color:blue;font-size:small" id="pZ"><a href="#theEnd">b i t . l y / n c i D a t a S c i</a></p>
+        <p><img src="bigW.png" width="100%"></p>
+        <p style="color:navy;font-size:medium">
+          1. The executable paper. <br>
+          2. Beyond the data deluge the code will travel.<br>
+          3. P4 medicine - Personalized, Predictive, Preventive, and Participated.
+        </p>
+    </div>
+    <div id="webMetabol" class="step slide" data-x="1000" data-y="-1000" data-z="-1500">
+        <!--<span style="font-size:medium;line-height:0;color:navy">Voit, E.O., J.S.Almeida (2004) Decoupling Dynamical Systems for Pathway Identification from Metabolic Profiles. Bioinformatics, 20(11):1670-81 [PMID:14988125].</span>-->
+        <img src="decouplingParameterEstimation.png" width="100%"><br>
+    </div>
+
+    <div id="webMetabolPromise" class="step slide" data-x="1900" data-y="-1000" data-z="-1500" data-scale="1">
+        <img src="webmetabolPromise.png" width="100%"><br>
+    </div>
+    <div id="webMetabolPromise_FigTab" class="step slide" data-x="1000" data-y="-300" data-z="-1500" data-scale="1">
+        <img src="webMetabol_Fig1.png" width="75%"><br><img src="webMetabol_Table1.png" width="75%">
+    </div>
+
+    <div id="neutralNets" class="step slide" data-x="1900" data-y="-300" data-z="-1500" data-scale="1">
+        <a href="http://www.biomedcentral.com/content/pdf/1752-0509-3-47.pdf" target=_blank style="font-size:large;line-height:0;color:navy">Vilela M, Vinga S, Grivet Mattoso Maia MA, Voit EO, Almeida JS. (2009) Identification of neutral biochemical network models from time series data. BMC Syst Biol. 2009 May 5;3(1):47.</a><hr>
+        <img src="neutralNetCode.png" width="100%">
+    </div>
+
+    <div id="prepMS" class="step slide" data-x="1000" data-y="400" data-z="-1500" data-scale="1">
+        <a href="http://sourceforge.net/projects/prepms/files/" target=_blank><img src="prepMS.png" width="100%"></a>
+    </div>
+    <div id="cancerMitas" class="step slide" data-x="1900" data-y="400" data-z="-1500" data-scale="1">
+      <a href="http://clincancerres.aacrjournals.org/content/11/6/2205.long" target=_blank><img src="Mitas.png" width="100%"></a>
+    </div>
+    <div id="dataDeluge" class="step slide" data-x="1000" data-y="-1000" data-z="1500" data-rotate="-360">
+        <img src="beyondDataDeluge.png" width="90%">
+    </div>
+
+    <div id="TCGAgrowth" class="step slide" data-x="1900" data-y="-1000"  data-z="1500" data-rotate="-360">
+        <i>TCGA <a href="https://tcga-data.nci.nih.gov/tcgafiles/ftp_auth/distro_ftpusers/anonymous/tumor/" target="_blank">dir</a></i><br><img src="tcgaGrowth.png" width="90%">
+        <p style="color:blue;font-size:medium">Robbins DE, A Gruneberg, HF Deus, MM Tanik, JS Almeida (2013) A Self-Updating Roadmap of The Cancer Genome Atlas. Bioinformatics 29(10):1333-40 [<a href="http://www.ncbi.nlm.nih.gov/pubmed/23595662" target="_blank">PMID:23595662</a>].</p>
+    </div>
+    <div id="tcgaRoadMap" class="step slide" data-x="1900" data-y="-300" data-z="1500" data-rotate="-360">
+      <i style="color:navy"><span style="font-size:large"><a href="http://tcga.github.com/Roadmap/" target=_blank>A Self-Updating Roadmap of The Cancer Genome Atlas</a></span><br><span style="font-size:medium">Robbins DE, A Gruneberg, HF Deus, MM Tanik, JS Almeida (2013) Bioinformatics 4(17) [<a href="http://www.ncbi.nlm.nih.gov/pubmed/23595662" target=_blank>PMID 23595662</a>][<a href="http://tcga.github.com/Roadmap" target="_blank">link</a>]</span></i><br>
+      <!--<iframe src="http://tcga.github.com/Roadmap" width=100% height=550></iframe>-->
+      <iframe src="https://jonasalmeida.github.io/presentations/tcgaRoadmap.htm" width=100% height=550></iframe>
+    </div>
+    
+    <div id="gbm" class="step slide" data-x="1000" data-y="-300"  data-z="1500" data-rotate="-360">
+        <p style="text-align:right;color:blue;font-size:small" id="pZ"><a href="#theEnd">b i t . l y / n c i D a t a S c i</a></p>
+        <p style="font-size:large;color:navy;line-height:140%">Freire P, M Vilela, HF Deus, YW Kim, D Koul, H Colman, KD Aldape, O Bogler, WKA Yung, K Coombes, GB Mills, AT Vasconcelos, JS Almeida (2008) <b style="color:blue">Exploratory Analysis of the Copy Number Alterations in Glioblastoma Multiforme</b>. PLoS ONE 3(12): e4076 doi:10.1371/journal.pone.0004076. [<a href="https://www.ncbi.nlm.nih.gov/pubmed/19115005" target="_blank" style="background-color:yellow">PMID 19115005</a>]</p>
+        <iframe src="journal.pone.0004076.g002.png" width="100%" height="70%"></iframe>
+        <p style="font-size:large;color:navy"><a href="https://youtu.be/LFzYi48gUks?t=202" target="_blank" style="background-color:yellow">YouTube</a> to the rescue ...<br>... "Identification of prognostic gene signatures of glioblastoma ..." (2013) Neuro-Oncology 15(7):829-39 [<a style="background-color:yellow" href="https://academic.oup.com/neuro-oncology/article/15/7/829/1041944/Identification-of-prognostic-gene-signatures-of" target="_blank">PMID:23502430</a>].</p>
+    </div>
+
+    <div id="imagejs" class="step slide" data-x="1000" data-y="-1000" data-z="3000">
+        <a style="font-size:large;color:navy;line-height:0" href="http://www.ncbi.nlm.nih.gov/pubmed/22934238" target=_blank>Almeida JS, E Iriabho, VL Gorrepati, S Wilkinson, DE Robbins, A Grüneberg, JR Hackney (2012) ImageJS: personalized, participated, pervasive and reproducible image bioinformatics in the web browser. J Pathology Informatics 3:25 [PMID:22934238].</a><hr>
+        <iframe src="http://imagejs.org" width="100%" height="450"></iframe>
+        <span style="font-size:medium">Example of active link: <a href="https://bitly.com/withData" target=_blank><img src="bitlyWithdata.png" width=50></a></span>
+    </div>
+    <div id="usm" class="step slide" data-x="1900" data-y="-1000" data-z="3000">
+        <span style="font-size:large;color:navy;line-height:0">Almeida JS, A Grüneberg, W Maass, S Vinga (2012) Fractal MapReduce decomposition of sequence alignment. Algorithms for Molecular Biology 7:12 [<a style="color:blue" href="http://www.almob.org/content/7/1/12" target=_blank>PMID:22551205</a>].</span><hr>
+        <iframe src="http://usm.github.com/" width="100%" height="500"></iframe>
+    </div>
+
+
+
+
+    <div id="introCont" class="step slide" data-x="0" data-y="-800">
+
+        <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / n c i D a t a S c i</a></p>
+
+        <h1 style="color:maroon">
+            &nbsp;<br>... there is, as always, a price to pay:
+        </h1>
+
+
+        <h2 style="color:navy;font-size:25px">
+            &nbsp;<br>
+            Many algorithms, and the underlying mathematical models, may require  extensive re-identification.
+        </h2>
+        <h1 style="color:maroon">
+            &nbsp;<br>&nbsp;<br>The rewards, however, are substancial
+        </h1>
+
+        <h2 style="color:navy;font-size:25px">
+            &nbsp;<br>particularly with the advancement of Open Data resources (for a peek see <a href="http://bit.ly/pqiSuffolk" target="_blank">http://bit.ly/pqiSuffolk</a>).
+        </h2>
+
+        <h4 style="color:gray;font-size:20px">
+            <i>
+            &nbsp;<br>&nbsp;<br>
+            This presentation will illustrate the opportunities and challenges of Web App ecosystems with examples from ongoing research projects in genomics, public health, and image analysis.
+            </i>
+        </h4>
+
+
+
+    </div>
+
+    <div id="informaticsDiv" class="step slide" data-x="-1000" data-y="-1500" data-z="-1500">
+        <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / n c i D a t a S c i</a></p>
+        <p style="font-size:large;color:navy;line-height:140%">JS Almeida, Hajagos J, Crnosija I, T Kurc, M Saltz, J Saltz (2015) OpenHealth Platform for Interactive Contextualization of Population Health Open Data. Proceedings AMIA 2015: 297-305 [<a href="https://www.ncbi.nlm.nih.gov/pubmed/26958160" target="_blank" style="background-color:yellow;color:blue">PMID:26958160<a>].</p>
+        <p align="center"><img src="OpenHealthBrowser.png"></p>
+    </div>
+
+    <div id="pqiSuffolk" class="step slide" data-x="-1000" data-y="-750" data-z="-1500">
+        <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / n c i D a t a S c i</a></p>
+        <img src="pqiSuffolk.png" width="90%"><a href="http://bit.ly/pqiSuffolk" target="_blank" style="color:blue;font-size:medium">[link]</a>
+    </div>
+
+    <div id="pqiSuffolkTable" class="step slide" data-x="-1000" data-y="0" data-z="-1500">
+        <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / n c i D a t a S c i</a></p>
+        <img src="pqiSuffolkTb1.png" width="120%">
+        <p>...<br>&nbsp;</p>
+        <img src="pqiSuffolkTb2.png" width="120%"><a href="http://bit.ly/pqiSuffolk" target="_blank" style="color:blue;font-size:medium">[link]</a>
+    </div>
+
+    <div id="sparcs2012" class="step slide" data-x="-0150" data-y="-1500" data-z="-1500" data-rotate="-90">
+        <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / n c i D a t a S c i</a></p>
+        <img src="sparcs2012.png" width="95%"><a href="http://bit.ly/sparcs2012" target="_blank" style="color:blue;font-size:medium">[link]</a>
+    </div>
+
+    <div id="bynpi" class="step slide" data-x="-1000" data-y="-2250" data-z="-1500" data-rotate="-180">
+        <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / n c i D a t a S c i</a></p>
+        <img src="npi.png" width="95%"><a href="http://bit.ly/bynpi2012" target="_blank" style="color:blue;font-size:medium">[link]</a>
+    </div>
+
+    <!--
+
+    <div id="emidioBiofold" class="step slide" data-x="-1000" data-y="-3000" data-z="-1500" data-rotate="-180">
+        <iframe src="http://biofold.org/emidio" width=100% height=600></iframe>
+    </div>
+    -->
+
+    <div id="tcgaScope" class="step slide" data-x="-1850" data-y="-1500" data-z="-1500" data-rotate="-270">
+        <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / n c i D a t a S c i</a></p>
+        <img src="tcgaScope.png" width="95%"><a href="http://bit.ly/tcgascope" target="_blank" style="color:blue;font-size:medium">[link]</a>
+    </div>
+
+    <div id="qmachineHPC" class="step slide" data-x="3000" data-y="-750">
+        <p>What about HPC problems?</p><hr><a href="http://www.hpcwire.com/hpcwire/2013-03-14/qmachine_combines_hpc_with_www.html" style="font-size:large;color:blue;line-height:0" target=_blank>HPC wire</a>
+        <img src="qmachineHPCwire.png" width="100%">
+
+    </div>
+
+    <div id="qmachineArchitecture" class="step slide" data-x="3000" data-y="-750" data-z="-1500">
+        <img src="qmachineArchitecture.png" width="100%">
+
+    </div>
+
+    <div id="qmachineVolunteering" class="step slide" data-x="3000" data-y="-750" data-z="-3000">
+    <img src="voluteeringHPC.png" width="65%">
+    <p style="font-size:large;color:navy">Foating-point performance distribution of the Top500 fastest supercomputers as of Nov 2012, given in terms of representative commodity laptops.</p>
+    <div style="position:absolute;top:10px;right:10px;width:50%">
+        "Even if we were given all the National Science Foundation supercomputing centers combined for a couple of months, that is still fewer resources than we have now, said Dr. Vijay Pande, the Stanford University biologist who directs Folding@home."<br>&nbsp;<br><i style="font-size:small">NYT 2002 Apr 23 "Supercomputing '@Home' Is Paying Off"</i>
+    </div>
+    </div>
+
+    <div id="qmachineStats" class="step slide" data-x="3000" data-y="-0" data-z="-3000">
+    <p style="text-align:right;color:blue;font-size:small" id="pZ"><a href="#theEnd">b i t . l y / n c i D a t a S c i</a></p>
+    <img src="QMachineStatistics.png" width="100%">
+    </div>
+
+    <div id="imageBoxFig" class="step slide" data-x="4000" data-y="-0" data-z="-3000">
+    <p style="text-align:right;color:blue;font-size:small" id="pZ"><a href="#theEnd">b i t . l y / n c i D a t a S c i</a></p>
+    <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">*</a></p>
+    <p style="font-size:18px;line-height:150%;color:navy"><img src="imageBoxFig.png" width="100%">Figure 1 - ImageBox implementation architecture. At the most basic level, by exposing an image traversing API (in red), the cloud hosted imageBox server acts as a cache for an IIP slice server.</p>
+    </div>
+
+    <div id="imageBoxTable" class="step slide" data-x="4000" data-y="-0" data-z="-4500">
+    <p style="text-align:right;color:blue;font-size:small" id="pZ"><a href="#theEnd">b i t . l y / n c i D a t a S c i</a></p>
+    <img src="imageBoxTable.png" width="100%">
+    </div>
+
+    <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">*</a></p>
+    <img src="imageBoxTable.png" width="100%">
+
+
+    <div id="PathologyPersonalizedMedicine" class="step slide" data-x="-1800" data-y="-1500" data-rotate="-270">
+        <img src="PathologyPersonalizedMedicine.png" width="100%"><br><i>March 19, 2013</i>
+    </div>
+
+    <div id="pathologySubspeciality" class="step slide" data-x="-2500" data-y="-1500" data-rotate="-270">
+        <i>March 2013</i><hr>
+        <img src="pathologySubspeciality.png" width="100%">
+    </div>
+
+    <div id="compPathRoth" class="step slide" data-x="-3200" data-y="-1500" data-z="-0" data-rotate="-270">
+        <img src="CompPathMicRoth.png" width="90%">
+    </div>
+
+    <div id="pathmic" class="step slide" data-x="-3200" data-y="-1500" data-z="1500" data-z="1500" data-rotate="-270">
+        <img src="micohFull.png" width="80%">
+        <p style="text-align:center;color:navy">to understand health and disease, we'll need to zoom in and out of <a href="https://www.sciencemag.org/content/342/6155/186.summary" target="_blank">Biology's dry future<br><span style="color:maroon">[Science 11 October 2013: NEWS FOCUS]</span></a> </p>
+    </div>
+    <div id="compPathHarvard" class="step slide" data-x="-3900" data-y="-1500" data-z="-0" data-rotate="-270">
+        <p style="text-align:right;color:blue;font-size:small" id="pZ"><a href="#theEnd">b i t . l y / n c i D a t a S c i</a></p>
+        <img src="compPathHarvard.png" width="90%">
+    </div>
+
+
+
+
+
+
+
+    <!--
+    <div id="systemsBiomedicine" class="step slide" data-x="-2600" data-y="-1500" data-z="-4500" data-rotate="-270">
+        <p style="text-align:right;font-size:medium">div Informatics <a style="color:blue" href="#theEnd"> + </a></p>
+        <img src="systemsBiomedicine.png" width="100%">
+    </div>
+    -->
+
+
+    <div id="refLinks" class="step slide" data-x="-0000" data-y="-1500" data-z="1500" style="color:navy">
+        <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / n c i D a t a S c i</a></p>
+        <h1 style="color:maroon">Reference Links</h1>
+        <hr>
+        <p>
+            <li>Genomic Variant Calling: <a href="https://ibl.github.io/vcf/">https://ibl.github.io/vcf/</a>.</li>
+            <li>Super Computing: <a href="https://www.biomedcentral.com/bmcbioinformatics/mostviewed/alltime">QMachine</a> .</li>
+            <li>Internet of Things: <a href="https://github.com/SBU-BMI/healthBit">FitBit</a> .</li>
+            <li>Sequence Analysis: <a href="https://usm.github.io">Whole Genome operations</a> .</li>
+            <li>Computational Cancer Genomics: <a href="https://github.com/ibl/cbio">cBio</a> .</li>
+            <li>EMR interoperability: <a href="https://github.com/SBU-BMI/fhir">HL7 FHIR</a> .</li>
+            <li>MRI: <a href="http://mri.googlecode.com/git/dcmDev.html" target="_blank">web slicer</a> .</li>
+            <li>Stony Brook's <a href="https://sbm-it.github.io/apps" target="_blank">App Store <img src="http://sbm-it.github.io/apps/dg/app/sbm-red-icon.png" width="10%" style="vertical-align:top"></a></li>
+            <li>... </li>
+    </div>
+
+    <div id="theEnd" class="step" data-x="0000" data-y="-1000" data-z="460" data-rotate-x="-40" data-rotate-y="-5" data-scale="6">
+    </div>
+
+
+
+<script>
+if ("ontouchstart" in document.documentElement) {
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+//location.protocol="http:"
+</script>
+
+<!--
+
+    Last, but not least.
+
+    To make all described above really work, you need to include impress.js in the page.
+    I strongly encourage to minify it first.
+
+    In here I just include full source of the script to make it more readable.
+
+    You also need to call a `impress().init()` function to initialize impress.js presentation.
+    And you should do it in the end of your document. Not only because it's a good practice, but also
+    because it should be done when the whole document is ready.
+    Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
+
+-->
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+<!--
+
+    The `impress()` function also gives you access to the API that controls the presentation.
+
+    Just store the result of the call:
+
+        var api = impress();
+
+    and you will get three functions you can call:
+
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+
+-->
+
+</body>
+</html>
