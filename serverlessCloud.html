@@ -4,9 +4,9 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=1024"/>
         <meta name="apple-mobile-web-app-capable" content="yes"/>
-        <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
-        <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com."/>
-        <meta name="author" content="Bartek Szopka"/>
+        <title>serverless TriCon</title>
+        <meta name="description" content="consumer-facing personalization achieved through FaaS and API economy"/>
+        <meta name="author" content="jonasalmeida.info"/>
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet"/>
         <!--
         Impress.js doesn't depend on any external stylesheet. Script adds all styles it needs for
@@ -107,533 +107,193 @@
         It will not be rotated or scaled.
 
     -->
-            <div id="abstract" class="step slide" data-x="-1000" data-y="-1500" data-z="2000" data-scale="1">
+    <div id="tricon2018" class="step slide" data-x="-1000" data-y="-1500" data-z="3000" data-rotate="0">
+        <img id="imgTricon2018" src="tricon2018.png" width="19%">
+        <img src="triconServerless.png" width="80%">
+    </div>
+
+    <div id="abstract" class="step slide" data-x="-1000" data-y="-1500" data-z="1500" data-scale="1">
                 <p style="text-align:right;color:blue;font-size:small" id="pZ">
-                    <a href="#theEnd">b i t . l y / w e b P i t t</a>
+                    <a href="#theEnd">b i t . l y / s e r v e r l e s s T r i C o n</a>
                 </p>
                 <p style="color:maroon;font-size:x-large">
-                    Data Science for Biomedical Informatics in the Planet of the Apps <br><span style="font-size:small;color:navy">Univ Pitt, 2017 Nov 30, <a href="http://www.health.pitt.edu/events/301117data-science-biomedical-informatics-planet-apps" target="_blank">http://www.health.pitt.edu/events/301117data-science-biomedical-informatics-planet-apps</a>.</span>
+                    <hr>
+                     How the “Serverless” Cloud Model Enables API Ecosystems as Health IT Infrastructure<br>
+                    <span style="color:maroon;font-size:x-large">Engineering <u>Learning Healthcare Systems</u> across <a href="#crossing">digital neighborhoods</a></span><br>
+                    <hr>
+                    <!--<span style="font-size:x-large;color:red;background-color:yellow">Live content will be available here at the time the presentation, Feb9 12:00</span>-->
                 </p>
-                <p style="color:blue;font-size:large">
-                    <a href="http://jonasalmeida.info" target="_blank">Jonas S Almeida</a>
-                    , PhD, Biomedical Informatics, Stony Brook Univ, NY.
+                <p style="color:blue;font-size:large;line-height:140%">
+                    <a href="http://jonasalmeida.info" target="_blank">Jonas S Almeida</a> PhD,
+                    <br>Professor, Chief Technology Officer, Dept Biomedical Informatics, Stony Brook Univ (SUNY), NY
                 
                 
                 
                 
                 </p>
-                <p style="color:maroon">Abstract</p>
+                <p style="color:maroon;line-height:200%">Abstract</p>
                 <p style="color:navy;font-size:large;font-family:courier;line-height:140%">
-                    As in all new fields of academic inquiry, Data Science starts with an identity crisis. So, what’s new about the way Data Science derives from Computer Science, Biostatistics and Genomic Atlases? Does the deployment of interoperable Data Spaces from Genomic Data Commons to HL7 FHIR, the commoditization of Cloud Computing, or the optimized classification with Machine Learning, fundamentally contribute to answering important questions? What about Precision Medicine, does Data Science even play a role in that translation beyond being a toolbox? This discussion will be illustrated with examples* of how Data Science already contributes to some of these endeavors, and how it could for many others, as it matures into a quantitative framework that is both pervasive and participated. It will be argued, and illustrated with published work, that Data Science opens a number of novel avenues in quantitative research that go beyond its immediate applications to the delivery of HealthCare. Bring your laptop if you want to try the examples as they are presented.
+                    Long established logistics and governance of Health IT have been fundamentally upset.
+                    1) Precision Medicine for both treatment and prevention calls for contextualization by
+                    reference BigData, such as Genomic Data Commons and Health Care Registries.
+                    2) PM's participatory nature redistributes the scopping of data access and turns EMR's into "FHIR Clouds".
+
+                    <!--What about Precision Medicine, does Data Science even play a role in that translation beyond being a toolbox? 
+                    This discussion will be illustrated with examples* of how Data Science already contributes to some of these endeavors, and how it could for many others, as it matures into a quantitative framework that is both pervasive and participated. 
+                    It will be argued, and illustrated with published work, that Data Science opens a number of novel avenues in quantitative research that go beyond its immediate applications to the delivery of HealthCare. Bring your laptop if you want to try the examples as they are presented.
+                    -->
                 </p>
+                <p style="color:navy;font-size:x-large;font-family:courier;line-height:500%;text-align:center">
+                Health Informatics <a href="#dataDeluge">beyond the Data Deluge</a>
+                </p>
+
                 <p style="color:navy;font-size:large;font-family:courier;line-height:140%">
-                    * such as <a href="http://bit.ly/KMestimator" style="background-color:yellow" target="_blank">http://bit.ly/KMestimator</a>, <a href="http://bit.ly/loadsparcs" style="background-color:yellow" target="_blank">http://bit.ly/loadsparcs</a>, <a href="http://bit.ly/pqiSuffolk" style="background-color:yellow" target="_blank">http://bit.ly/pqiSuffolk</a>, <a href="http://bit.ly/tcgascope" style="background-color:yellow" target="_blank">http://bit.ly/tcgascope</a>, <a href="http://bit.ly/vcfProto" style="background-color:yellow" target="_blank">http://bit.ly/vcfProto</a>.
+                    Illustrative examples: <a href="http://bit.ly/KMestimator" style="background-color:yellow" target="_blank">http://bit.ly/KMestimator</a>, <a href="http://bit.ly/loadsparcs" style="background-color:yellow" target="_blank">http://bit.ly/loadsparcs</a>, <a href="http://bit.ly/pqiSuffolk" style="background-color:yellow" target="_blank">http://bit.ly/pqiSuffolk</a>, <a href="http://bit.ly/tcgascope" style="background-color:yellow" target="_blank">http://bit.ly/tcgascope</a>, <a href="http://bit.ly/vcfProto" style="background-color:yellow" target="_blank">http://bit.ly/vcfProto</a>.
                 </p>
             </div>
-            <div id="abstractBioinformatics" class="step slide" data-x="-1000" data-y="-1500" data-z="1000" data-scale="1">
-                <p style="color:maroon;font-size:x-large">
-                    Bioinformatics in the Web Computer – the code will travel. <span style="font-size:large;color:navy">[UnivPitt, Nov 30, 2017]</span>
-                </p>
-                <p style="color:blue;font-size:large">
-                    <a href="http://jonasalmeida.info" target="_blank">Jonas S Almeida</a>
-                    , PhD, Biomedical Informatics, Stony Brook Univ, NY.
-                
-                
-                
-                
-                </p>
-                <hr>
-                <p style="color:navy;font-size:large;font-family:courier;line-height:140%">
-                    After becoming a <b>global data space</b>
-                    in the past decade, the Web is now evolving to become a <b>global compute space</b>
-                    . We have tested the boundaries of this approach with a number of published experiments describing browser-injectable applications to image analysis, sequence analysis and population health. The results suggest that the increasing reliance of computational genomics on cloud computing can be approached in a manner that can truly port the computation to where the data is, including to patient-facing web applications (“Apps”). Prototypes like <a href="http://qmachine.org" target="_blank">qmachine.org</a>
-                    , <a href="http://bit.ly/pqiSuffolk" target="_blank">bit.ly/pqiSuffolk</a>
-                    and <a href="https://sbm-bmi.github.io/imagebox" target="_blank">sbu-bmi.github.io/imagebox</a>
-                    suggest that this approach can be vastly more cost effective, safe, and reproducible than that the conventional reliance on moving the data to centralized analytical pipelines. This result is particularly accentuated when the analytical algorithms are re-identified to take full advantage of the functional patterns that underpin browser-based computation, as illustrated by <a href="http://usm.github.io" target="_blank">usm.github.io</a>
-                    . 
-                    
-                    
-                    
-                    
-                    <span style="color:green">
-                        [Presentation online at: <a href="http://bit.ly/webPitt" target="_blank" style="color:blue;background-color:yellow">bit.ly/webPitt</a>
-                        ]
-                    
-                    
-                    
-                    
+
+             <div id="cancerMitas" class="step slide" data-x="-3000" data-y="-300" data-z="3000" data-scale="1">
+                <a href="http://clincancerres.aacrjournals.org/content/11/6/2205.long" target=_blank>
+                    <img src="Mitas.png" width="100%">
+                </a>
+            </div>
+
+            <div id="GBMcnv" class="step slide" data-x="-2000" data-y="-300" data-z="2900" data-scale="1">
+                <p style="color:navy;font-size:small;font-family:courier;line-height:140%">Freire P, M Vilela, HF Deus, YW Kim, D Koul, H Colman, KD Aldape, O Bogler, WKA Yung, K Coombes, GB Mills,
+                 AT Vasconcelos, JS Almeida (2008) Exploratory Analysis of the Copy Number Alterations in Glioblastoma Multiforme.
+                  PLoS ONE 3(12). [<a href="http://www.ncbi.nlm.nih.gov/pubmed/19115005" target="_blank">PMID19115005</a>] [<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2605252/#s3title" target="_blank">Entropy calculation</a>].</p>
+                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2605252/figure/pone-0004076-g002/" target=_blank>
+                    <img src="GBMcnv.png" height="90%">
+                </a>
+            </div>
+
+
+            <div id="tcgaRoadMap" class="step slide" data-x="-2000" data-y="-300" data-z="1500" data-rotate="0">
+                <i style="color:navy">
+                    <span style="font-size:large">
+                        <a href="http://tcga.github.com/Roadmap/" target=_blank>A Self-Updating Roadmap of The Cancer Genome Atlas</a>
                     </span>
-                </p>
-                <hr>
-                <p style="color:navy;font-size:large;font-family:courier;line-height:140%">
-                    <b>Link sampler:</b>
                     <br>
-                    <a href="http://bit.ly/pqiSuffolk" target="_blank" style="background-color:yellow">http://bit.ly/pqiSuffolk</a>
-                    , <a href="http://bit.ly/tcgascope" target="_blank" style="background-color:yellow">http://bit.ly/tcgascope</a>
-                    , <a href="http://bit.ly/healthBit" target="_blank" style="background-color:yellow">http://bit.ly/healthBit</a>
-                    , <a href="https://sbu-bmi.github.io/featurescape/u24Preview.html" target="_blank" style="background-color:yellow">https://sbu-bmi.github.io/featurescape/u24Preview.html</a>
-                    , <a href="https://sbu-bmi.github.io/featurescape/fig4.html" target="_blank" style="background-color:yellow">https://sbu-bmi.github.io/featurescape/fig4.html</a>
-                    , <a href="http://sbu-bmi.github.io/imagebox" target="_blank" style="background-color:yellow">http://sbu-bmi.github.io/imagebox</a>
-                    , <a href="http://vcf2rdf.org/" target="_blank" style="background-color:yellow">http://vcf2rdf.org</a>
-                    , <a href="https://bit.ly/vcfmrsa" target="_blank" style="background-color:yellow">bit.ly/vcfmrsa</a>
-                    ,<a href="https://code.cerner.com/developer/smart-on-fhir/apps" target="_blank" style="background-color:yellow">SMART on FHIR</a>
-                    , <a href="https://docs.google.com/document/d/1V2UOfXwvELvtjviV2HyCwIwD1ULXzCqqFtU5Yjbp8BY/edit?usp=sharing" target="_blank" style="background-color:yellow;color:red">retreat Jan 2017</a>
-                    .
-                
-                
-                
-                
-                </p>
+                    <span style="font-size:medium">
+                        Robbins DE, A Gruneberg, HF Deus, MM Tanik, JS Almeida (2013) Bioinformatics 4(17) [<a href="http://www.ncbi.nlm.nih.gov/pubmed/23595662" target=_blank>PMID 23595662</a>
+                        ][<a href="http://tcga.github.com/Roadmap" target="_blank">link</a>]
+                    </span>
+                </i>
+                <br>
+                <!--<iframe src="http://tcga.github.com/Roadmap" width=100% height=550></iframe>-->
+                <iframe src="tcgaRoadmap.htm" width=100% height=550></iframe>
             </div>
-            <div id="intro" class="step slide" data-x="-0000" data-y="-1500">
+
+            <div id="qmachineStats" class="step slide" data-x="100" data-y="0" data-z="3000">
                 <p style="text-align:right;color:blue;font-size:small" id="pZ">
-                    <a href="#theEnd">b i t . l y / w e b P i t t</a>
+                    <a href="#theEnd">b i t . l y / s e r v e r l e s s T r i C o n</a>
                 </p>
-                <p style="color:maroon">Implementation advantages</p>
+                <a href="http://qmachine.org" target="_blank"><img src="QMachineStatistics.png" width="100%"></a>
+            </div>
+
+            <div id="pqiSuffolk" class="step slide" data-x="100" data-y="0" data-z="1500">
+                <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / s e r v e r l e s s T r i C o n</a></p>
+                <p style="color:navy;font-size:small;font-family:courier;line-height:140%">Almeida JS, Hajagos J, Crnosija I, T Kurc, M Saltz, 
+                J Saltz (2015) OpenHealth Platform for Interactive Contextualization of Population Health Open Data. Proceedings AMIA 2015: 297-305
+                [<a href="http://www.ncbi.nlm.nih.gov/pubmed/26958160" target="_blank">PMID26958160</a>]
+                <img src="pqiSuffolk.png" width="90%"><a href="http://bit.ly/pqiSuffolk" target="_blank" style="color:blue;font-size:medium">[link]</a>
+            </div>
+
+            <div id="dataDeluge" class="step slide" data-x="-1000" data-y="-1500" data-z="0" data-rotate="0">
+                <img src="beyondDataDeluge.png" width="90%">
+            </div>
+
+            <div id="web4bio" class="step slide" data-x="-1000" data-y="-500" data-z="0" data-rotate="0">
+                <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / s e r v e r l e s s T r i C o n</a></p>
+                <p style="line-height:300%">Education as the ultimate Interface</p>
+                <li style="color:navy;font-size:large;font-family:courier;line-height:140%">
+                    <span style="color:green;line-height:300%">Immersive team-based data-driven transdisciplinary learning</span>
+                    <a href="https://web4bio.github.io" target="_blank"><img src="web4bio.png" width="60%"></a>
+                </li>
+                <li style="color:navy;font-size:large;font-family:courier;line-height:140%">
+                <span style="color:green;line-height:300%">Toolmaking Graduate Research</span><br>
+                Bremer E, T Kurc , Y Gao , J Saltz , JS Almeida (2017) 
+                Safe “cloudification” of large images through picker APIs. 
+                AMIA Annu Symp Proc. 2016:342-351.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/28269829" target="_blank">28269829</a>].
+                </li>
+                <li style="color:navy;font-size:large;font-family:courier;line-height:140%">
+                <span style="color:green;line-height:300%">Consortium driven research</span><br>
+                Alterovitz G, DA Dean II, C Goble, MR Crusoe, S Soiland-Reyes, A Bell, A Hayes, 
+                C Hadley S King IV, D Taylor, E Johanson, EE Thompson, 
+                E Donaldson, H Morizono, HS Tsang, J Goecks, J Yao, 
+                JS Almeida, K Krampis, L Guo, M Walderhaug, P Walsh, 
+                R Kahsay, S Gottipati, T Bloom, Y Lai, V Simonyan, 
+                R Mazumder (2017) Enabling Precision Medicine via standard 
+                communication of NGS provenance, analysis, and results. 
+                bioRxiv [<a href="https://doi.org/10.1101/191783" target="_blank">doi.org/10.1101/191783</a>].
+                </li>
+                <li style="color:navy;font-size:large;font-family:courier;line-height:140%">
+                <span style="color:green;line-height:300%">Public-facing Open Health Data Navigators such as <a href="http://bit.ly/loadsparcs" target="_blank" style="color:blue;background-color:yellow">bit.ly/loadsparcs</a></span><br>
+                <!--<iframe src="https://mathbiol.github.io/#load sparcs" width="100%" height="100%"></iframe>-->
+                </li>
+            </div>
+
+
+            <div id="bigPic" class="step slide" data-x="0" data-y="300" data-z="0">
+                <p style="text-align:right;color:blue;font-size:small" id="pZ">
+                    <a href="#theEnd">b i t . l y / s e r v e r l e s s T r i C o n</a>
+                </p>
+                <p>
+                    <img src="OpenHealthScale.png" width="100%">
+                </p>
+
+            </div>
+
+            
+
+            <div id="crossing" class="step slide" data-x="-3000" data-y="300" data-z="0" data-rotate="0">
+                <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / s e r v e r l e s s T r i C o n</a></p>
+                <p style="line-height:300%">Crossing neighborhoods</p>
+                <p style="color:navy;font-size:50px;font-family:courier;line-height:100%;text-align:center">
+                <li style="color:navy;font-size:xx-large;font-family:courier;line-height:200%">
+                    Genomics <a href="http://bit.ly/vcfmrsa" style="background-color:yellow">bit.ly/vcfmrsa</a>
+                </li>
+                <li style="color:navy;font-size:xx-large;font-family:courier;line-height:200%">
+                    Wearable sensing <a href="http://bit.ly/healthbit" style="background-color:yellow" target="_blank">bit.ly/healthbit</a>
+                </li>
+                <li style="color:navy;font-size:xx-large;font-family:courier;line-height:200%">
+                    Population Health <a href="http://bit.ly/dsripmap" style="background-color:yellow" target="_blank">bit.ly/dsripmap</a>
+                </li>
+                <li style="color:navy;font-size:xx-large;font-family:courier;line-height:200%">
+                    Multivariate <a href="http://bit.ly/featurescapeDemo" style="background-color:yellow" target="_blank">bit.ly/featurescapeDemo</a>
+                </li>
+                <li style="color:navy;font-size:xx-large;font-family:courier;line-height:200%">
+                    Multi-data <a href="http://bit.ly/dsripspace" style="background-color:yellow" target="_blank"x>bit.ly/dsripspace</a>
+                </li>
+                <li style="color:navy;font-size:xx-large;font-family:courier;line-height:140%">
+                    Integration <a href="https://wikipedia.org/wiki/s3db" style="background-color:yellow" target="_blank"x>wikipedia.org/wiki/s3db</a>
+
+                </li>
                 <hr>
-                <p style="color:navy;font-size:20px">
-        The emergence of the <a href="http://www.webplatform.org/" target="_blank">Web Platform</a>
-        as the dominant vehicle for consumer informatics has created opportunities for disseminating research applications at a truly global scale, and in a manner that ...
-    
-    
-    
-    <hr>
-    <ol>
-        <li style="color:maroon;font-size:20px">a) persists in time;</li>
-        <li style="color:maroon;font-size:20px">b) requires minimal maintenance;</li>
-        <li style="color:maroon;font-size:20px">c) delivers reproducible analysis, and</li>
-        <li style="color:maroon;font-size:20px">d) is much safer than the conventional model where data leaves the original hosting environment.</li>
-    </ol>
-    </p>
-</div>
-<div id="bigPic" class="step slide" data-x="1000" data-y="-1000">
-    <p style="text-align:right;color:blue;font-size:small" id="pZ">
-        <a href="#theEnd">b i t . l y / w e b P i t t</a>
-    </p>
-    <p>
-        <img src="OpenHealthScale.png" width="100%">
-    </p>
-    
-</div>
+                <p style="font-size:x-large;line-height:120%">
+                    Almeida JS, C Chen, R Gorlitsky, R Stanislaus, M Aires-de-Sousa, P Eleutério, JA Carriço, A Maretzek, A Bohn, A Chang, F Zhang, R Mitra,
+                     GB Mills, X Wang, HF Deus (2006) Data integration gets 'Sloppy'. 
+                     Nature Biotechnology 24(9):1070-1071 [<a href="http://www.ncbi.nlm.nih.gov/pubmed/16964209" target="_blank">16964209</a>].
+                    </p>
+                
+                </p>    
+                
+            </div>
 
-<div id="fairCommons" class="step slide" data-x="1000" data-y="-200">
-    <p style="text-align:right;color:blue;font-size:small" id="pZ">
-        <a href="#theEnd">b i t . l y / w e b P i t t</a>
-    </p>
-    <p> Data Commons</p>
-    <hr>
-    <p style="color:green;font-size:medium;font-family:courier;line-height:140%">
-    Wilson S et. al GDC Project (2017) Developing Cancer Informatics Applications and Tools Using the NCI Genomic Data Commons API. Cancer Res. 77(21):e15-e18 [<a href="https://www.ncbi.nlm.nih.gov/pubmed/29092930" style="background-color:yellow" target="_blank">PMID:29092930</a>].
-    <li style="color:navy;font-size:medium;font-family:courier;line-height:140%"> from pre-commons <a href="http://www.cbioportal.org" style="background-color:yellow" target="_blank">www.cbioportal.org</a> to <a href="http://mathbiol.github.io/cbio/" style="background-color:yellow" target="_blank">mathbiol.github.io/cbio</a> ... </li>
-    <li style="color:navy;font-size:medium;font-family:courier;line-height:140%"> ... and full commons <a href="http://mathbiol.github.io/gdc" style="background-color:yellow" target="_blank">mathbiol.github.io/gdc</a>.</li>
-    </p>
-    <hr>
-    <p> FAIRness</p>
-    <hr>
-    <p style="color:green;font-size:medium;font-family:courier;line-height:140%">
-    Wilkinson, MD et. al (2016) The FAIR Guiding Principles for scientific data management and stewardship. Scientific Data 3:160018 [<a href="https://www.ncbi.nlm.nih.gov/pubmed/26978244" style="background-color:yellow" target="_blank">PMID:26978244</a>].
-    </p>
-    <li style="color:navy;font-size:medium;font-family:courier;line-height:140%"> from Analysis <a href="#/imagejs" style="background-color:yellow" target="_blank">imageJS</a> to a FAIR <a href="http://bit.ly/withData" style="background-color:yellow" target="_blank">result</a> ... </li>
-    <li style="color:navy;font-size:medium;font-family:courier;line-height:140%"> ... and OpenHealth: Almeida JS, Hajagos J, Crnosija I, T Kurc, M Saltz, J Saltz (2015) OpenHealth Platform for Interactive Contextualization of Population Health Open Data. Proceedings AMIA 2015: 297-305 [<a href="https://www.ncbi.nlm.nih.gov/pubmed/26958160" style="background-color:yellow" target="_blank">PMID:26958160</a>].</li>
-    <li style="color:navy;font-size:medium;font-family:courier;line-height:140%"> DSRIP, SPARCS, Featurescape etc (<span style="color:red;background-color:yellow">Hands-on</span>)
+    <div id="theEnd" class="step" data-x="-1500" data-y="-1500" data-z="460" data-rotate-x="-40" data-rotate-y="-5" data-scale="7"></div>
+
+            <div id="links" class="step slide" data-x="-2000" data-y="300" data-z="0" data-rotate="0">
+                <!--<p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / s e r v e r l e s s T r i C o n</a></p>-->
+                <!--<p style="line-height:300%">LINK to presentation</p>-->
+                <p style="color:navy;font-size:50px;font-family:courier;line-height:100%;text-align:center">
+                
+                <img src="qrTriCon2018.png" width="70%">
+                <br><a href="http://bit.ly/serverlessTriCon" style="background-color:yellow">bit.ly/serverlessTriCon</a>
+                </p>    
+                
+            </div>
 
 </div>
-
-<div id="web4bio" class="step slide" data-x="2000" data-y="-200">
-    <p style="text-align:right;color:blue;font-size:small" id="pZ">
-        <a href="#theEnd">b i t . l y / w e b P i t t</a>
-    </p>
-    <hr>
-    <a href="https://web4bio.github.io" target="_blank"><img src="web4bio.png" width="100%"></a>
-    <hr>
-    <li style="color:navy;font-size:medium;font-family:courier;line-height:140%">let's check how code is written <a href="http://www.modulecounts.com" style="background-color:yellow" target="_blank">elsewhere</a> ...</li>
-    <li style="color:navy;font-size:medium;font-family:courier;line-height:140%">... and how it is <a href="https://smashingconf.com/toronto-2018/" style="background-color:yellow" target="_blank">taught</a> and <a href="https://www.forbes.com/sites/bernardmarr/2017/02/28/is-data-socialization-the-next-big-thing-in-data-analytics" style="background-color:yellow" target="_blank">socialized</a>. </li>
-
-</div>
-
-<div id="sms" class="step slide" data-x="2000" data-y="-1000">
-    <p style="text-align:right;color:blue;font-size:small" id="pZ">
-        <a href="#theEnd">b i t . l y / w e b P i t t</a>
-    </p>
-    <p>
-        ChatBot <a href="https://www.twilio.com/console/runtime/functions/manage/ZH67eb97171c18e2bd4077bc7c4de925c0" style="background-color:yellow" target="_blank">FaaS</a>
-    </p>
-    <p>
-        <img src="twitterSms.png" width="80%"></img>
-    </p>
-    
-</div>
-
-<div id="webMetabol" class="step slide" data-x="1000" data-y="-1000" data-z="-1500">
-    <!--<span style="font-size:medium;line-height:0;color:navy">Voit, E.O., J.S.Almeida (2004) Decoupling Dynamical Systems for Pathway Identification from Metabolic Profiles. Bioinformatics, 20(11):1670-81 [PMID:14988125].</span>-->
-    <img src="decouplingParameterEstimation.png" width="100%">
-    <br>
-</div>
-<div id="webMetabolPromise" class="step slide" data-x="1900" data-y="-1000" data-z="-1500" data-scale="1">
-    <img src="webmetabolPromise.png" width="100%">
-    <br>
-</div>
-<div id="webMetabolPromise_FigTab" class="step slide" data-x="1000" data-y="-300" data-z="-1500" data-scale="1">
-    <img src="webMetabol_Fig1.png" width="75%">
-    <br>
-    <img src="webMetabol_Table1.png" width="75%">
-</div>
-<div id="neutralNets" class="step slide" data-x="1900" data-y="-300" data-z="-1500" data-scale="1">
-    <a href="http://www.biomedcentral.com/content/pdf/1752-0509-3-47.pdf" target=_blank style="font-size:large;line-height:0;color:navy">Vilela M, Vinga S, Grivet Mattoso Maia MA, Voit EO, Almeida JS. (2009) Identification of neutral biochemical network models from time series data. BMC Syst Biol. 2009 May 5;3(1):47.</a>
-    <hr>
-    <img src="neutralNetCode.png" width="100%">
-</div>
-<div id="prepMS" class="step slide" data-x="1000" data-y="400" data-z="-1500" data-scale="1">
-    <a href="http://sourceforge.net/projects/prepms/files/" target=_blank>
-        <img src="prepMS.png" width="100%">
-    </a>
-</div>
-<div id="cancerMitas" class="step slide" data-x="1900" data-y="400" data-z="-1500" data-scale="1">
-    <a href="http://clincancerres.aacrjournals.org/content/11/6/2205.long" target=_blank>
-        <img src="Mitas.png" width="100%">
-    </a>
-</div>
-<div id="dataDeluge" class="step slide" data-x="1000" data-y="-1000" data-z="1500" data-rotate="-360">
-    <img src="beyondDataDeluge.png" width="90%">
-</div>
-<div id="TCGAgrowth" class="step slide" data-x="1900" data-y="-1000" data-z="1500" data-rotate="-360">
-    <i>
-        TCGA <a href="https://tcga-data.nci.nih.gov/tcgafiles/ftp_auth/distro_ftpusers/anonymous/tumor/" target="_blank">dir</a>
-    </i>
-    <br>
-    <img src="tcgaGrowth.png" width="90%">
-    <p style="color:blue;font-size:medium">
-        Robbins DE, A Gruneberg, HF Deus, MM Tanik, JS Almeida (2013) A Self-Updating Roadmap of The Cancer Genome Atlas. Bioinformatics 29(10):1333-40 [<a href="http://www.ncbi.nlm.nih.gov/pubmed/23595662" target="_blank">PMID:23595662</a>
-        ].
-    
-    
-    
-    
-    </p>
-</div>
-<div id="tcgaRoadMap" class="step slide" data-x="1900" data-y="-300" data-z="1500" data-rotate="-360">
-    <i style="color:navy">
-        <span style="font-size:large">
-            <a href="http://tcga.github.com/Roadmap/" target=_blank>A Self-Updating Roadmap of The Cancer Genome Atlas</a>
-        </span>
-        <br>
-        <span style="font-size:medium">
-            Robbins DE, A Gruneberg, HF Deus, MM Tanik, JS Almeida (2013) Bioinformatics 4(17) [<a href="http://www.ncbi.nlm.nih.gov/pubmed/23595662" target=_blank>PMID 23595662</a>
-            ][<a href="http://tcga.github.com/Roadmap" target="_blank">link</a>
-            ]
-        
-        
-        
-        
-        </span>
-    </i>
-    <br>
-    <!--<iframe src="http://tcga.github.com/Roadmap" width=100% height=550></iframe>-->
-    <iframe src="http://jonasalmeida.github.io/presentations/tcgaRoadmap.htm" width=100% height=550></iframe>
-</div>
-<div id="tcga" class="step slide" data-x="1000" data-y="-300" data-z="1500" data-rotate="-360">
-    <a href="https://tcga-data.nci.nih.gov/tcga/" target=_blank>
-        <img src="https://tcga-data.nci.nih.gov/tcga/images/general/tcga-dp_logo.png">
-    </a>
-    <br>
-    <iframe src="https://tcga-data.nci.nih.gov/tcga/" width=100% height=550></iframe>
-</div>
-<div id="imagejs" class="step slide" data-x="1000" data-y="-1000" data-z="3000">
-    <a style="font-size:large;color:navy;line-height:0" href="http://www.ncbi.nlm.nih.gov/pubmed/22934238" target=_blank>Almeida JS, E Iriabho, VL Gorrepati, S Wilkinson, DE Robbins, A Grüneberg, JR Hackney (2012) ImageJS: personalized, participated, pervasive and reproducible image bioinformatics in the web browser. J Pathology Informatics 3:25 [PMID:22934238].</a>
-    <hr>
-    <iframe src="http://imagejs.org" width="100%" height="450"></iframe>
-    <span style="font-size:medium">
-        Example of active link: 
-        
-        
-        
-        
-        <a href="https://bitly.com/withData" target=_blank>
-            <img src="bitlyWithdata.png" width=50>
-        </a>
-    </span>
-</div>
-<div id="usm" class="step slide" data-x="1900" data-y="-1000" data-z="3000">
-    <span style="font-size:large;color:navy;line-height:0">
-        Almeida JS, A Grüneberg, W Maass, S Vinga (2012) Fractal MapReduce decomposition of sequence alignment. Algorithms for Molecular Biology 7:12 [<a style="color:blue" href="http://www.almob.org/content/7/1/12" target=_blank>PMID:22551205</a>
-        ].
-    
-    
-    
-    
-    </span>
-    <hr>
-    <iframe src="http://usm.github.com/" width="100%" height="500"></iframe>
-</div>
-<div id="introCont" class="step slide" data-x="0" data-y="-800">
-    <p style="text-align:right;color:blue;font-size:small">
-        <a href="#theEnd">b i t . l y / w e b P i t t</a>
-    </p>
-    <h1 style="color:maroon">
-        &nbsp;<br>... there is, as always, a price to pay:
-        
-    
-    
-    
-    
-    </h1>
-    <h2 style="color:navy;font-size:25px">
-        &nbsp;<br>Many algorithms, and the underlying mathematical models, may require  extensive re-identification.
-        
-    
-    
-    
-    
-    </h2>
-    <h1 style="color:maroon">
-        &nbsp;<br>
-        &nbsp;<br>The rewards, however, are substancial
-        
-    
-    
-    
-    
-    </h1>
-    <h2 style="color:navy;font-size:25px">
-        &nbsp;<br>
-        particularly with the advancement of Open Data resources (for a peek see <a href="http://bit.ly/pqiSuffolk" target="_blank">http://bit.ly/pqiSuffolk</a>
-        ).
-        
-    
-    
-    
-    
-    </h2>
-    <h4 style="color:gray;font-size:20px">
-        <i>
-            &nbsp;<br>
-            &nbsp;<br>This presentation will illustrate the opportunities and challenges of Web App ecosystems with examples from ongoing research projects in genomics, public health, and image analysis.
-            
-        
-        
-        
-        
-        </i>
-    </h4>
-</div>
-<div id="informaticsDiv" class="step slide" data-x="-1000" data-y="-1500" data-z="-1500">
-    <p style="text-align:right;color:blue;font-size:small">
-        <a href="#theEnd">b i t . l y / w e b P i t t</a>
-    </p>
-    <img src="openhealthAmia2015.png" width="90%">
-</a>
-<!--<iframe src="http://uab.mathbiol.org/informatics" width=100% height=500></iframe>-->
-<!--<iframe src="http://uab.mathbiol.org/informatics" width=100% height=500></iframe>-->
-</div>
-<div id="pqiSuffolk" class="step slide" data-x="-1000" data-y="-750" data-z="-1500">
-    <p style="text-align:right;color:blue;font-size:small">
-        <a href="#theEnd">b i t . l y / w e b P i t t</a>
-    </p>
-    <img src="pqiSuffolk.png" width="90%">
-    <a href="http://bit.ly/pqiSuffolk" target="_blank" style="color:blue;font-size:medium">[link]</a>
-</div>
-<div id="pqiSuffolkTable" class="step slide" data-x="-1000" data-y="0" data-z="-1500">
-    <p style="text-align:right;color:blue;font-size:small">
-        <a href="#theEnd">b i t . l y / w e b P i t t</a>
-    </p>
-    <img src="pqiSuffolkTb1.png" width="120%">
-    <p>
-        ...<br>&nbsp;
-    </p>
-    <img src="pqiSuffolkTb2.png" width="120%">
-    <a href="http://bit.ly/pqiSuffolk" target="_blank" style="color:blue;font-size:medium">[link]</a>
-</div>
-<div id="sparcs2012" class="step slide" data-x="-0150" data-y="-1500" data-z="-1500" data-rotate="-90">
-    <p style="text-align:right;color:blue;font-size:small">
-        <a href="#theEnd">b i t . l y / w e b P i t t</a>
-    </p>
-    <img src="sparcs2012.png" width="95%">
-    <a href="http://bit.ly/sparcs2012" target="_blank" style="color:blue;font-size:medium">[link]</a>
-</div>
-<div id="bynpi" class="step slide" data-x="-1000" data-y="-2250" data-z="-1500" data-rotate="-180">
-    <p style="text-align:right;color:blue;font-size:small">
-        <a href="#theEnd">b i t . l y / w e b P i t t</a>
-    </p>
-    <img src="npi.png" width="95%">
-    <a href="http://bit.ly/bynpi2012" target="_blank" style="color:blue;font-size:medium">[link]</a>
-</div>
-<!--
-
-    <div id="emidioBiofold" class="step slide" data-x="-1000" data-y="-3000" data-z="-1500" data-rotate="-180">
-        <iframe src="http://biofold.org/emidio" width=100% height=600></iframe>
-    </div>
-    -->
-<div id="tcgaScope" class="step slide" data-x="-1850" data-y="-1500" data-z="-1500" data-rotate="-270">
-    <p style="text-align:right;color:blue;font-size:small">
-        <a href="#theEnd">b i t . l y / w e b P i t t</a>
-    </p>
-    <img src="tcgaScope.png" width="95%">
-    <a href="http://bit.ly/tcgascope" target="_blank" style="color:blue;font-size:medium">[link]</a>
-</div>
-<div id="qmachineHPC" class="step slide" data-x="3000" data-y="-750">
-    <p>What about HPC problems?</p>
-    <hr>
-    <a href="http://www.hpcwire.com/hpcwire/2013-03-14/qmachine_combines_hpc_with_www.html" style="font-size:large;color:blue;line-height:0" target=_blank>HPC wire</a>
-    <img src="qmachineHPCwire.png" width="100%">
-</div>
-<div id="qmachineArchitecture" class="step slide" data-x="3000" data-y="-750" data-z="-1500">
-    <img src="qmachineArchitecture.png" width="100%">
-</div>
-<div id="qmachineVolunteering" class="step slide" data-x="3000" data-y="-750" data-z="-3000">
-    <img src="voluteeringHPC.png" width="65%">
-    <p style="font-size:large;color:navy">Foating-point performance distribution of the Top500 fastest supercomputers as of Nov 2012, given in terms of representative commodity laptops.</p>
-    <div style="position:absolute;top:10px;right:10px;width:50%">
-        "Even if we were given all the National Science Foundation supercomputing centers combined for a couple of months, that is still fewer resources than we have now, said Dr. Vijay Pande, the Stanford University biologist who directs Folding@home."<br>
-        &nbsp;<br>
-        <i style="font-size:small">NYT 2002 Apr 23 "Supercomputing '@Home' Is Paying Off"</i>
-    </div>
-</div>
-<div id="qmachineStats" class="step slide" data-x="3000" data-y="-0" data-z="-3000">
-    <p style="text-align:right;color:blue;font-size:small" id="pZ">
-        <a href="#theEnd">b i t . l y / w e b P i t t</a>
-    </p>
-    <img src="QMachineStatistics.png" width="100%">
-</div>
-<div id="imageBoxFig" class="step slide" data-x="4000" data-y="-0" data-z="-3000">
-    <p style="text-align:right;color:blue;font-size:small" id="pZ">
-        <a href="#theEnd">b i t . l y / w e b P i t t</a>
-    </p>
-    <p style="text-align:right;color:blue;font-size:small">
-        <a href="#theEnd">*</a>
-    </p>
-    <p style="font-size:18px;line-height:150%;color:navy">
-        <img src="imageBoxFig.png" width="100%">Figure 1 - ImageBox implementation architecture. At the most basic level, by exposing an image traversing API (in red), the cloud hosted imageBox server acts as a cache for an IIP slice server.
-    
-    
-    
-    
-    </p>
-</div>
-<div id="imageBoxTable" class="step slide" data-x="4000" data-y="-0" data-z="-4500">
-    <p style="text-align:right;color:blue;font-size:small" id="pZ">
-        <a href="#theEnd">b i t . l y / w e b P i t t</a>
-    </p>
-    <img src="imageBoxTable.png" width="100%">
-</div>
-<p style="text-align:right;color:blue;font-size:small">
-    <a href="#theEnd">*</a>
-</p>
-<img src="imageBoxTable.png" width="100%">
-<div id="PathologyPersonalizedMedicine" class="step slide" data-x="-1800" data-y="-1500" data-rotate="-270">
-    <img src="PathologyPersonalizedMedicine.png" width="100%">
-    <br>
-    <i>March 19, 2013</i>
-</div>
-<div id="pathologySubspeciality" class="step slide" data-x="-2500" data-y="-1500" data-rotate="-270">
-    <i>March 2013</i>
-    <hr>
-    <img src="pathologySubspeciality.png" width="100%">
-</div>
-<div id="compPathRoth" class="step slide" data-x="-3200" data-y="-1500" data-z="-0" data-rotate="-270">
-    <img src="CompPathMicRoth.png" width="90%">
-</div>
-<div id="pathmic" class="step slide" data-x="-3200" data-y="-1500" data-z="1500" data-z="1500" data-rotate="-270">
-    <img src="micohFull.png" width="80%">
-    <p style="text-align:center;color:navy">
-        to understand health and disease, we'll need to zoom in and out of 
-        
-        
-        
-        
-        <a href="https://www.sciencemag.org/content/342/6155/186.summary" target="_blank">
-            Biology's dry future<br>
-            <span style="color:maroon">[Science 11 October 2013: NEWS FOCUS]</span>
-        </a>
-    </p>
-</div>
-<div id="compPathHarvard" class="step slide" data-x="-3900" data-y="-1500" data-z="-0" data-rotate="-270">
-    <p style="text-align:right;color:blue;font-size:small" id="pZ">
-        <a href="#theEnd">b i t . l y / w e b P i t t</a>
-    </p>
-    <img src="compPathHarvard.png" width="90%">
-</div>
-<!--
-    <div id="systemsBiomedicine" class="step slide" data-x="-2600" data-y="-1500" data-z="-4500" data-rotate="-270">
-        <p style="text-align:right;font-size:medium">div Informatics <a style="color:blue" href="#theEnd"> + </a></p>
-        <img src="systemsBiomedicine.png" width="100%">
-    </div>
-    -->
-<div id="refLinks" class="step slide" data-x="-0000" data-y="-1500" data-z="1500" style="color:navy">
-    <p style="text-align:right;color:blue;font-size:small">
-        <a href="#theEnd">b i t . l y / w e b P i t t</a>
-    </p>
-    <h1 style="color:maroon">Reference Links</h1>
-    <hr>
-    <p>
-        <li>
-            Genomic Variant Calling: <a href="https://ibl.github.io/vcf/">https://ibl.github.io/vcf/</a>
-            .
-        
-        
-        
-        
-        </li>
-        <li>
-            Super Computing: <a href="https://www.biomedcentral.com/bmcbioinformatics/mostviewed/alltime">QMachine</a>
-            .
-        
-        
-        
-        
-        </li>
-        <li>
-            Internet of Things: <a href="https://github.com/SBU-BMI/healthBit">FitBit</a>
-            .
-        
-        
-        
-        
-        </li>
-        <li>
-            Sequence Analysis: <a href="https://usm.github.io">Whole Genome operations</a>
-            .
-        
-        
-        
-        
-        </li>
-        <li>
-            Computational Cancer Genomics: <a href="https://github.com/ibl/cbio">cBio</a>
-            .
-        
-        
-        
-        
-        </li>
-        <li>
-            EMR interoperability: <a href="https://github.com/SBU-BMI/fhir">HL7 FHIR</a>
-            .
-        
-        
-        
-        
-        </li>
-        <li>
-            MRI: <a href="http://mri.googlecode.com/git/dcmDev.html" target="_blank">web slicer</a>
-            .
-        
-        
-        
-        
-        </li>
-        <li>
-            Stony Brook's 
-            
-            
-            
-            
-            <a href="https://sbm-it.github.io/apps" target="_blank">
-                App Store <img src="http://sbm-it.github.io/apps/dg/app/sbm-red-icon.png" width="10%" style="vertical-align:top">
-            </a>
-        </li>
-        <li>... </li>
-</div>
-<div id="theEnd" class="step" data-x="0000" data-y="-1000" data-z="460" data-rotate-x="-40" data-rotate-y="-5" data-scale="6"></div>
 <script>
     if ("ontouchstart"in document.documentElement) {
         document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
