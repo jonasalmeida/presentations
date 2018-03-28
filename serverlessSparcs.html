@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=1024"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <title>serverless TriCon</title>
+        <meta name="description" content="consumer-facing personalization achieved through FaaS and API economy"/>
+        <meta name="author" content="jonasalmeida.info"/>
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet"/>
+        <!--
+        Impress.js doesn't depend on any external stylesheet. Script adds all styles it needs for
+        presentation to work.
+
+        This style below contains styles only for demo presentation. Browse it to see how impress.js
+        classes are used to style presentation steps, or how to apply fallback styles, but I don't want
+        you to use them directly in your presentation.
+
+        Be creative, build your own. We don't really want all impress.js presentations to look the same,
+        do we?
+
+        When creating your own presentation get rid of this file. Start from scratch, it's fun!
+
+    -->
+        <link href="css/impress-demo.css" rel="stylesheet"/>
+        <link rel="shortcut icon" href="favicon.png"/>
+        <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+    </head>
+    <!--
+
+    Body element is used by impress.js to set some useful class names, that will allow you to detect
+    the support and state of the presentation in CSS or other scripts.
+
+    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
+    support features required by impress.js, so you should apply some fallback styles in your CSS.
+    It's not necessary to add it manually on this element. If the script detects that browser is not
+    good enough it will add this class, but keeping it in HTML means that users without JavaScript
+    will also get fallback styles.
+
+    When impress.js script detects that browser supports all required features, this class name will
+    be removed.
+
+    The class name on body element also depends on currently active presentation step. More details about
+    it can be found later, when `hint` element is being described.
+
+-->
+    <body class="impress-not-supported">
+        <!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+        <div class="fallback-message">
+            <p>
+                Your browser <b>doesn't support the features required</b>
+                by impress.js, so you are presented with a simplified version of this presentation.
+            
+            
+            
+            
+            </p>
+            <p>
+                For the best experience please use the latest <b>Chrome</b>
+                , <b>Safari</b>
+                or <b>Firefox</b>
+                browser.
+            
+            
+            
+            
+            </p>
+        </div>
+        <!--
+
+    Now that's the core element used by impress.js.
+
+    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
+    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
+
+    You probably won't need it now, but there are some configuration options that can be set on this element.
+
+    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
+    a number of ms. It defaults to 1000 (1s).
+
+    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
+    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
+    If you are willing to change this value make sure you understand how CSS perspective works:
+    https://developer.mozilla.org/en/CSS/perspective
+
+    But as I said, you won't need it for now, so don't worry - there are some simple but interesing things
+    right around the corner of this tag ;)
+
+-->
+        <div id="impress">
+            <!--
+
+        Here is where interesting thing start to happen.
+
+        Each step of the presentation should be an element inside the `#impress` with a class name
+        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+        the 'camera' shows them on each step of the presentation.
+
+        Positioning information is passed through data attributes.
+
+        In the example below we only specify x and y position of the step element with `data-x="-1000"`
+        and `data-y="-1500` attributes. This means that **the center** of the element (yes, the center)
+        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+
+        It will not be rotated or scaled.
+
+    -->
+    <div id="tricon2018" class="step slide" data-x="-1000" data-y="-1500" data-z="3000" data-rotate="0">
+        <img id="imgTricon2018" src="tricon2018.png" width="19%">
+        <img src="triconServerless.png" width="80%">
+    </div>
+
+    <div id="abstract" class="step slide" data-x="-1000" data-y="-1500" data-z="1500" data-scale="1">
+                <p style="text-align:right;color:blue;font-size:small" id="pZ">
+                    <a href="#theEnd">b i t . l y / s e r v e r l e s s T r i C o n</a>
+                </p>
+                <p style="color:maroon;font-size:x-large">
+                    <hr>
+                     How the “Serverless” Cloud Model Enables API Ecosystems as Health IT Infrastructure<br>
+                    <span style="color:maroon;font-size:x-large">Engineering <u>Learning Healthcare Systems</u> across <a href="#crossing">digital neighborhoods</a></span><br>
+                    <hr>
+                    <!--<span style="font-size:x-large;color:red;background-color:yellow">Live content will be available here at the time the presentation, Feb9 12:00</span>-->
+                </p>
+                <p style="color:blue;font-size:large;line-height:140%">
+                    <a href="http://jonasalmeida.info" target="_blank">Jonas S Almeida</a> PhD,
+                    <br>Professor, Chief Technology Officer, Dept Biomedical Informatics, Stony Brook Univ (SUNY), NY
+                
+                
+                
+                
+                </p>
+                <p style="color:maroon;line-height:200%">Abstract</p>
+                <p style="color:navy;font-size:large;font-family:courier;line-height:140%">
+                    Long established logistics and governance of Health IT have been fundamentally upset.
+                    1) Precision Medicine for both treatment and prevention calls for contextualization by
+                    reference BigData, such as Genomic Data Commons and Health Care Registries.
+                    2) PM's participatory nature redistributes the scopping of data access and turns EMR's into "FHIR Clouds".
+
+                    <!--What about Precision Medicine, does Data Science even play a role in that translation beyond being a toolbox? 
+                    This discussion will be illustrated with examples* of how Data Science already contributes to some of these endeavors, and how it could for many others, as it matures into a quantitative framework that is both pervasive and participated. 
+                    It will be argued, and illustrated with published work, that Data Science opens a number of novel avenues in quantitative research that go beyond its immediate applications to the delivery of HealthCare. Bring your laptop if you want to try the examples as they are presented.
+                    -->
+                </p>
+                <p style="color:navy;font-size:x-large;font-family:courier;line-height:500%;text-align:center">
+                Health Informatics <a href="#dataDeluge">beyond the Data Deluge</a>
+                </p>
+
+                <p style="color:navy;font-size:large;font-family:courier;line-height:140%">
+                    Illustrative examples: <a href="http://bit.ly/KMestimator" style="background-color:yellow" target="_blank">http://bit.ly/KMestimator</a>, <a href="http://bit.ly/loadsparcs" style="background-color:yellow" target="_blank">http://bit.ly/loadsparcs</a>, <a href="http://bit.ly/pqiSuffolk" style="background-color:yellow" target="_blank">http://bit.ly/pqiSuffolk</a>, <a href="http://bit.ly/tcgascope" style="background-color:yellow" target="_blank">http://bit.ly/tcgascope</a>, <a href="http://bit.ly/vcfProto" style="background-color:yellow" target="_blank">http://bit.ly/vcfProto</a>.
+                </p>
+            </div>
+
+             <div id="cancerMitas" class="step slide" data-x="-3000" data-y="-300" data-z="3000" data-scale="1">
+                <a href="http://clincancerres.aacrjournals.org/content/11/6/2205.long" target=_blank>
+                    <img src="Mitas.png" width="100%">
+                </a>
+            </div>
+
+            <div id="GBMcnv" class="step slide" data-x="-2000" data-y="-300" data-z="2900" data-scale="1">
+                <p style="color:navy;font-size:small;font-family:courier;line-height:140%">Freire P, M Vilela, HF Deus, YW Kim, D Koul, H Colman, KD Aldape, O Bogler, WKA Yung, K Coombes, GB Mills,
+                 AT Vasconcelos, JS Almeida (2008) Exploratory Analysis of the Copy Number Alterations in Glioblastoma Multiforme.
+                  PLoS ONE 3(12). [<a href="http://www.ncbi.nlm.nih.gov/pubmed/19115005" target="_blank">PMID19115005</a>] [<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2605252/#s3title" target="_blank">Entropy calculation</a>].</p>
+                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2605252/figure/pone-0004076-g002/" target=_blank>
+                    <img src="GBMcnv.png" height="90%">
+                </a>
+            </div>
+
+
+            <div id="tcgaRoadMap" class="step slide" data-x="-2000" data-y="-300" data-z="1500" data-rotate="0">
+                <i style="color:navy">
+                    <span style="font-size:large">
+                        <a href="http://tcga.github.com/Roadmap/" target=_blank>A Self-Updating Roadmap of The Cancer Genome Atlas</a>
+                    </span>
+                    <br>
+                    <span style="font-size:medium">
+                        Robbins DE, A Gruneberg, HF Deus, MM Tanik, JS Almeida (2013) Bioinformatics 4(17) [<a href="http://www.ncbi.nlm.nih.gov/pubmed/23595662" target=_blank>PMID 23595662</a>
+                        ][<a href="http://tcga.github.com/Roadmap" target="_blank">link</a>]
+                    </span>
+                </i>
+                <br>
+                <!--<iframe src="http://tcga.github.com/Roadmap" width=100% height=550></iframe>-->
+                <iframe src="tcgaRoadmap.htm" width=100% height=550></iframe>
+            </div>
+
+            <div id="qmachineStats" class="step slide" data-x="100" data-y="0" data-z="3000">
+                <p style="text-align:right;color:blue;font-size:small" id="pZ">
+                    <a href="#theEnd">b i t . l y / s e r v e r l e s s T r i C o n</a>
+                </p>
+                <a href="http://qmachine.org" target="_blank"><img src="QMachineStatistics.png" width="100%"></a>
+            </div>
+
+            <div id="pqiSuffolk" class="step slide" data-x="100" data-y="0" data-z="1500">
+                <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / s e r v e r l e s s T r i C o n</a></p>
+                <p style="color:navy;font-size:small;font-family:courier;line-height:140%">Almeida JS, Hajagos J, Crnosija I, T Kurc, M Saltz, 
+                J Saltz (2015) OpenHealth Platform for Interactive Contextualization of Population Health Open Data. Proceedings AMIA 2015: 297-305
+                [<a href="http://www.ncbi.nlm.nih.gov/pubmed/26958160" target="_blank">PMID26958160</a>]
+                <img src="pqiSuffolk.png" width="90%"><a href="http://bit.ly/pqiSuffolk" target="_blank" style="color:blue;font-size:medium">[link]</a>
+            </div>
+
+            <div id="dataDeluge" class="step slide" data-x="-1000" data-y="-1500" data-z="0" data-rotate="0">
+                <img src="beyondDataDeluge.png" width="90%">
+            </div>
+
+            <div id="web4bio" class="step slide" data-x="-1000" data-y="-500" data-z="0" data-rotate="0">
+                <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / s e r v e r l e s s T r i C o n</a></p>
+                <p style="line-height:300%">Education as the ultimate Interface</p>
+                <li style="color:navy;font-size:large;font-family:courier;line-height:140%">
+                    <span style="color:green;line-height:300%">Immersive team-based data-driven transdisciplinary learning</span>
+                    <a href="https://web4bio.github.io" target="_blank"><img src="web4bio.png" width="60%"></a>
+                </li>
+                <li style="color:navy;font-size:large;font-family:courier;line-height:140%">
+                <span style="color:green;line-height:300%">Toolmaking Graduate Research</span><br>
+                Bremer E, T Kurc , Y Gao , J Saltz , JS Almeida (2017) 
+                Safe “cloudification” of large images through picker APIs. 
+                AMIA Annu Symp Proc. 2016:342-351.[<a href="http://www.ncbi.nlm.nih.gov/pubmed/28269829" target="_blank">28269829</a>].
+                </li>
+                <li style="color:navy;font-size:large;font-family:courier;line-height:140%">
+                <span style="color:green;line-height:300%">Consortium driven research</span><br>
+                Alterovitz G, DA Dean II, C Goble, MR Crusoe, S Soiland-Reyes, A Bell, A Hayes, 
+                C Hadley S King IV, D Taylor, E Johanson, EE Thompson, 
+                E Donaldson, H Morizono, HS Tsang, J Goecks, J Yao, 
+                JS Almeida, K Krampis, L Guo, M Walderhaug, P Walsh, 
+                R Kahsay, S Gottipati, T Bloom, Y Lai, V Simonyan, 
+                R Mazumder (2017) Enabling Precision Medicine via standard 
+                communication of NGS provenance, analysis, and results. 
+                bioRxiv [<a href="https://doi.org/10.1101/191783" target="_blank">doi.org/10.1101/191783</a>].
+                </li>
+                <li style="color:navy;font-size:large;font-family:courier;line-height:140%">
+                <span style="color:green;line-height:300%">Public-facing Open Health Data Navigators such as <a href="http://bit.ly/loadsparcs" target="_blank" style="color:blue;background-color:yellow">bit.ly/loadsparcs</a></span><br>
+                <!--<iframe src="https://mathbiol.github.io/#load sparcs" width="100%" height="100%"></iframe>-->
+                </li>
+            </div>
+
+
+            <div id="bigPic" class="step slide" data-x="0" data-y="300" data-z="0">
+                <p style="text-align:right;color:blue;font-size:small" id="pZ">
+                    <a href="#theEnd">b i t . l y / s e r v e r l e s s T r i C o n</a>
+                </p>
+                <p>
+                    <img src="OpenHealthScale.png" width="100%">
+                </p>
+
+            </div>
+
+             <div id="bco" class="step slide" data-x="0" data-y="1300" data-z="0">
+                <p style="text-align:right;color:blue;font-size:small" id="pZ">
+                    <a href="#theEnd">b i t . l y / s e r v e r l e s s T r i C o n</a>
+                </p>
+                <p style="color:navy;font-size:large;font-family:courier;line-height:140%">
+                <span style="color:green">Using our <a href="https://mathbiol.github.io/bco/" target="_blank">BCO</a> construct as an example let's discuss the case for travelling code in API ecosystems ...</span><br>
+                Alterovitz et. al (2017) Enabling Precision Medicine via standard 
+                communication of NGS provenance, analysis, and results. 
+                bioRxiv [<a href="https://doi.org/10.1101/191783" target="_blank">doi.org/10.1101/191783</a>].
+                </p>
+                <li style="color:navy;font-size:large;font-family:courier;line-height:400%">
+                    User-facing "FHIR" as place-holder for interoperability with ref int (why?)
+                </li>
+                <li style="color:navy;font-size:large;font-family:courier;line-height:400%">
+                    "SMART" as place-holder for scoping rules engine (how?)
+                </li>
+                <li style="color:navy;font-size:large;font-family:courier;line-height:400%">
+                    "FaaS" as place-holder for someone's credit card (who?)
+                </li>
+
+                <li style="color:navy;font-size:large;font-family:courier;line-height:400%">
+                    Collaborative Data Science for <a href="https://commonfund.nih.gov/bd2k/commons" target="_blank" style="background-color:yellow">FAIR</a>er research (where?) ...
+                </li>
+                <p style="color:navy;font-size:large;font-family:courier;line-height:140%">
+                    Let's look at the two places available for literate programming, server-side and client side. It could be, for example, 
+                    <a href="https://colab.research.google.com/notebook" target="_blank">Google Colab</a> 
+                    and <a href="https://observablehq.com" target="_blank">Observable Notebooks</a>.
+                    Unfortunately (from an architecture perspective), too often it is the ability to establish BAAs 
+                    with Cloud providers that still determines what server-side resource is used.
+                    The situation is much more hopeful on the client-side ... and Data Scientists are
+                    starting to <a href="https://solid.mit.edu" target="_blank">take note</a> (pun intended!). 
+                    Deep Learning offers a great case-study, illustrated by <a href="https://deeplearnjs.org" target="_blank">deeplearnjs.org</a>
+                    as a mechanism for subscription to a broader API ecosystem.
+                     
+                </p>
+
+            </div>
+
+            
+
+            <div id="crossing" class="step slide" data-x="-3000" data-y="300" data-z="0" data-rotate="0">
+                <p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / s e r v e r l e s s T r i C o n</a></p>
+                <p style="line-height:300%">Crossing neighborhoods</p>
+                <p style="color:navy;font-size:50px;font-family:courier;line-height:100%;text-align:center">
+                <li style="color:navy;font-size:xx-large;font-family:courier;line-height:200%">
+                    Genomics <a href="http://bit.ly/vcfmrsa" style="background-color:yellow">bit.ly/vcfmrsa</a>
+                </li>
+                <li style="color:navy;font-size:xx-large;font-family:courier;line-height:200%">
+                    Wearable sensing <a href="http://bit.ly/healthbit" style="background-color:yellow" target="_blank">bit.ly/healthbit</a>
+                </li>
+                <li style="color:navy;font-size:xx-large;font-family:courier;line-height:200%">
+                    Population Health <a href="http://bit.ly/dsripmap" style="background-color:yellow" target="_blank">bit.ly/dsripmap</a>
+                </li>
+                <li style="color:navy;font-size:xx-large;font-family:courier;line-height:200%">
+                    Multivariate <a href="http://bit.ly/featurescapeDemo" style="background-color:yellow" target="_blank">bit.ly/featurescapeDemo</a>
+                </li>
+                <li style="color:navy;font-size:xx-large;font-family:courier;line-height:200%">
+                    Multi-data <a href="http://bit.ly/dsripspace" style="background-color:yellow" target="_blank"x>bit.ly/dsripspace</a>
+                </li>
+                <li style="color:navy;font-size:xx-large;font-family:courier;line-height:140%">
+                    Integration <a href="https://wikipedia.org/wiki/s3db" style="background-color:yellow" target="_blank"x>wikipedia.org/wiki/s3db</a>
+
+                </li>
+                <hr>
+                <p style="font-size:x-large;line-height:120%">
+                    Almeida JS, C Chen, R Gorlitsky, R Stanislaus, M Aires-de-Sousa, P Eleutério, JA Carriço, A Maretzek, A Bohn, A Chang, F Zhang, R Mitra,
+                     GB Mills, X Wang, HF Deus (2006) Data integration gets 'Sloppy'. 
+                     Nature Biotechnology 24(9):1070-1071 [<a href="http://www.ncbi.nlm.nih.gov/pubmed/16964209" target="_blank">16964209</a>].
+                    </p>
+                
+                </p>    
+                
+            </div>
+
+    <div id="theEnd" class="step" data-x="-1500" data-y="-1500" data-z="460" data-rotate-x="-40" data-rotate-y="-5" data-scale="7"></div>
+
+            <div id="links" class="step slide" data-x="-2000" data-y="300" data-z="0" data-rotate="0">
+                <!--<p style="text-align:right;color:blue;font-size:small"><a href="#theEnd">b i t . l y / s e r v e r l e s s T r i C o n</a></p>-->
+                <!--<p style="line-height:300%">LINK to presentation</p>-->
+                <p style="color:navy;font-size:50px;font-family:courier;line-height:100%;text-align:center">
+                
+                <img src="qrTriCon2018.png" width="70%">
+                <br><a href="http://bit.ly/serverlessTriCon" style="background-color:yellow">bit.ly/serverlessTriCon</a>
+                </p>    
+                
+            </div>
+
+</div>
+<script>
+    if ("ontouchstart"in document.documentElement) {
+        document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+    }
+    //location.protocol="http:"
+</script>
+<!--
+
+    Last, but not least.
+
+    To make all described above really work, you need to include impress.js in the page.
+    I strongly encourage to minify it first.
+
+    In here I just include full source of the script to make it more readable.
+
+    You also need to call a `impress().init()` function to initialize impress.js presentation.
+    And you should do it in the end of your document. Not only because it's a good practice, but also
+    because it should be done when the whole document is ready.
+    Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
+
+-->
+<script src="js/impress.js"></script>
+<script>
+    impress().init();
+</script>
+<!--
+
+    The `impress()` function also gives you access to the API that controls the presentation.
+
+    Just store the result of the call:
+
+        var api = impress();
+
+    and you will get three functions you can call:
+
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+
+-->
+</body></html>
