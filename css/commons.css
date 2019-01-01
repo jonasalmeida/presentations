@@ -3,6 +3,17 @@ h2 {
     color:maroon;
 }
 
+h4 {
+    font-size:medium;
+    text-align:right;
+    line-height:0;
+    font-family:fantasy;
+}
+
+a:hover { 
+  background-color: yellow;
+}
+
 div {
     font-family:inherit
 }
@@ -14,5 +25,6 @@ p {
 }
 
 a {
-    color:blue
+    color:blue;
+    font-size:inherit;
 }
