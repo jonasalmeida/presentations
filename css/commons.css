@@ -1,0 +1,18 @@
+
+h2 {
+    color:maroon;
+}
+
+div {
+    font-family:inherit
+}
+
+p {
+    font-size:large;
+    color:navy;
+    line-height:1.5
+}
+
+a {
+    color:blue
+}
