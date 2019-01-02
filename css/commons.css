@@ -8,11 +8,15 @@ h4 {
     text-align:right;
     line-height:0;
     font-family:monospace;
-    
+
 }
 
 a:hover { 
   background-color: yellow;
+}
+
+b:hover {
+    color:red
 }
 
 div {
@@ -28,4 +32,9 @@ p {
 a {
     color:blue;
     font-size:inherit;
+}
+
+.highlight:hover {
+    background-color:#f3f4e3;
+    color:green
 }
