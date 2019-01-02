@@ -4,10 +4,11 @@ h2 {
 }
 
 h4 {
-    font-size:medium;
+    font-size:large;
     text-align:right;
     line-height:0;
-    font-family:fantasy;
+    font-family:monospace;
+    
 }
 
 a:hover { 
