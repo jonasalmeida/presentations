@@ -14,6 +14,10 @@ var sandboxData=[
         url:"https://bit.ly/pqiSuffolk"
     },
     {
+        info:"DSRIP hospital readmissions",
+        url:"https://bit.ly/dsripspace"
+    },
+    {
         info:"Tell Stories",
         url:"https://bit.ly/KMestimator"
     },
@@ -42,7 +46,7 @@ var sandboxData=[
     },
     {
         info:'Web tech',
-        url:"http://bit.ly/modulecount",
+        url:"https://bit.ly/modulecount",
     },
     {
         info:'Convolutional NNs',
@@ -63,7 +67,7 @@ var sandboxData=[
         //tdLink
         li = document.createElement('li')
         li.style.fontSize="medium"
-        li.style.lineHeight=1.3
+        li.style.lineHeight=1.2
         li.innerHTML = `${dt.info} <button style="background-color:yellow" id="bt_${i}">&rarr;</button> <a href="${dt.url}" target="_blank">${dt.url.replace(/https:\/\//g,'')}</a>`
         tdLink.appendChild(li)
         window['bt_'+i].onclick=function(){
