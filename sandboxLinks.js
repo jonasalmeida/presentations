@@ -14,7 +14,7 @@ var sandboxData=[
         url:"https://bit.ly/pqiSuffolk"
     },
     {
-        info:"DSRIP hospital readmissions",
+        info:"DSRIP hospital data",
         url:"https://bit.ly/dsripspace"
     },
     {
@@ -22,12 +22,12 @@ var sandboxData=[
         url:"https://bit.ly/KMestimator"
     },
     {
-        info:"Socialize what is already public",
+        info:"Socialize what is public",
         url:"https://bit.ly/tweetDSRIP",
         new:true // new window
     },
     {
-        info:"Sample wearable sensor",
+        info:"Sample wearables",
         url:'https://bit.ly/healthbit',
         new:true
     },
@@ -58,11 +58,11 @@ var sandboxData=[
         url:"https://playground.tensorflow.org",
     },
     {
-        info:'Vertically integrated learning',
+        info:'Vertically integrated EDU',
         url:"https://web4bio.github.io/webgen/",
     },
     {
-        info:'WebComputing architecture',
+        info:'WebComp architecture',
         url:"https://bit.ly/webComp"
     },
     {
