@@ -6,7 +6,7 @@ var sandboxData=[
         url:"https://bit.ly/tcgascope"
     },
     {
-        info:"Traversing NY patient encounters",
+        info:"NY patient encounters",
         url:"https://bit.ly/loadsparcs"
     },
     {
@@ -46,7 +46,8 @@ var sandboxData=[
     },
     {
         info:'Web tech',
-        url:"https://bit.ly/modulecount",
+        url:"http://modulecounts.com",
+        new:true
     },
     {
         info:'Convolutional NNs',
@@ -55,6 +56,19 @@ var sandboxData=[
     {
         info:'TensorflowJS',
         url:"https://playground.tensorflow.org",
+    },
+    {
+        info:'Vertically integrated learning',
+        url:"https://web4bio.github.io/webgen/",
+    },
+    {
+        info:'WebComputing architecture',
+        url:"https://bit.ly/webComp"
+    },
+    {
+        info:'Privacy at the edge ...',
+        url:'https://mylife.com',
+        new:true
     }
 
     //https://medium.com/@sbrice/whats-is-npm-df503d773a7f
@@ -66,9 +80,9 @@ var sandboxData=[
     sandboxData.forEach(function(dt,i){
         //tdLink
         li = document.createElement('li')
-        li.style.fontSize="medium"
+        li.style.fontSize="14px"
         li.style.lineHeight=1.2
-        li.innerHTML = `${dt.info} <button style="background-color:yellow" id="bt_${i}">&rarr;</button> <a href="${dt.url}" target="_blank">${dt.url.replace(/https:\/\//g,'')}</a>`
+        li.innerHTML = `${dt.info} <button style="background-color:yellow" id="bt_${i}">&rarr;</button><br><a href="${dt.url}" target="_blank">${dt.url.replace(/https:\/\//g,'')}</a>`
         tdLink.appendChild(li)
         window['bt_'+i].onclick=function(){
             if(dt.new){
