@@ -79,10 +79,10 @@ var sandboxData=[
     sandboxIfr.src=sandboxData[0].url
     sandboxData.forEach(function(dt,i){
         //tdLink
-        li = document.createElement('li')
+        li = document.createElement('p')
         li.style.fontSize="14px"
         li.style.lineHeight=1.2
-        li.innerHTML = `${dt.info} <button style="background-color:yellow" id="bt_${i}">&rarr;</button><br><a href="${dt.url}" target="_blank">${dt.url.replace(/https:\/\//g,'')}</a>`
+        li.innerHTML = `- <a href="${dt.url}" target="_blank" style="color:green">${dt.url.replace(/https:\/\//g,'')}</a><br>${dt.info} <button style="background-color:yellow" id="bt_${i}">&rarr;</button>`
         tdLink.appendChild(li)
         window['bt_'+i].onclick=function(){
             if(dt.new){
