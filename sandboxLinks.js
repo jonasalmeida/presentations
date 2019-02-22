@@ -7,7 +7,7 @@ var sandboxData=[
     },
     {
         info:"NY patient encounters",
-        url:"https://bit.ly/loadsparcs"
+        url:"https://bit.ly/ldsparcs"
     },
     {
         info:"Acountable Care",
