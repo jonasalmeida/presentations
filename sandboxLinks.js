@@ -39,11 +39,11 @@ var sandboxData=[
         info:"Socialize pathologists",
         url:"https://bit.ly/tcgatil"
     },
-    {
+    /*{
         info:'Socialize SMS, try it at <br><span style="font-size:x-large;color:red">832 648 2521</span>',
         url:"https://messages.android.com",
         new:true
-    },
+    },*/
     {
         info:'Web tech',
         url:"http://modulecounts.com",
