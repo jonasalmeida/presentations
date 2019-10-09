@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=1024"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <title>bcoWeb</title>
+        <meta name="description" content="BCO as a manifest for orchestrating Web API ecosystems"/>
+        <meta name="author" content="jonasalmeida.info"/>
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet"/>
+        <link href="css/impress-demo.css" rel="stylesheet"/>
+        <link href="css/commons.css" rel="stylesheet"/>
+        <link rel="shortcut icon" href="favicon.png"/>
+        <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+    </head>
+    <!--
+
+    Body element is used by impress.js to set some useful class names, that will allow you to detect
+    the support and state of the presentation in CSS or other scripts.
+
+    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
+    support features required by impress.js, so you should apply some fallback styles in your CSS.
+    It's not necessary to add it manually on this element. If the script detects that browser is not
+    good enough it will add this class, but keeping it in HTML means that users without JavaScript
+    will also get fallback styles.
+
+    When impress.js script detects that browser supports all required features, this class name will
+    be removed.
+
+    The class name on body element also depends on currently active presentation step. More details about
+    it can be found later, when `hint` element is being described.
+
+-->
+    <body class="impress-not-supported">
+        <!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+        <!--<div class="fallback-message">
+            <p>
+                Your browser <b>doesn't support the features required</b>
+                by impress.js, so you are presented with a simplified version of this presentation.
+
+
+
+
+
+
+            </p>
+            <p>
+                For the best experience please use the latest <b>Chrome</b>
+                , <b>Safari</b>
+                or <b>Firefox</b>
+                browser.
+
+
+
+
+
+
+            </p>
+        </div>-->
+
+        <div id="impress">
+
+            <div id="abstract" class="step slide" data-x="-1000" data-y="-1500" data-z="3000" data-rotate="0">
+                <h4> <a href="#theEnd" style="color:red">bit.ly/webBCO</a></h4>
+                <p style="font-size:12px">&nbsp;</p>
+                <div style="text-align:left">
+                    <p><a href="https://www.biocomputeobject.org/2019-workshop-agenda.html" target="_blank">BioCompute Objects: Tools for Communicating Next Generation Sequencing Data and Analysis</a></p>
+                    <p>May 14, 2019, FDA, Maryland, USA</p>
+                    <p><a href="https://dceg.cancer.gov/about/staff-directory/biographies/A-J/almeida-jonas" target="_blank" style="color:maroon;font-size:26px">Jonas S Almeida</a>, <a href="https://dceg.cancer.gov" target="_blank">NCI/DCEG</a> Chief Data Scientist</p>
+                    <p style="font-size:22px">&nbsp;</p>
+                    <h2>
+                        BCO as a manifest for orchestrating Web API ecosystems.
+                    </h2>
+                    <p style="font-size:12px">&nbsp;</p>
+                    <p style="font-size:22px">
+                        Modern cloud execution models such as “<span class="highlight">serverless computing</span>” (FaaS) create <span class="highlight">stateless API ecosystems that allow the code to move to the data</span>, rather than the more conventional have the data travel to where the application is deployed. The latter is much harder to scale and is nearly impossible to govern transparently. This presentation will illustrate this mechanism with applications to population studies, from genomics to pathology. It will also explore how a computational ecosystems approach using popular APIs for computational genomics, such as GA4GH and GDC, depends on the ability to <span class="highlight">operate without loss of governance</span>. In that regard BCOs represent a particularly interesting opportunity to define computational manifests that orchestrate the authenticated operation reproducibly. 
+                    </p>    
+                </div>
+            </div>
+
+            <div id="bco" class="step slide" data-x="-1000" data-y="-700" data-z="3000" data-rotate="0">
+                <h4> <a href="#theEnd" style="color:red">bit.ly/webBCO</a></h4>
+                <div style="text-align:left;height:100%">
+                <a href="https://mathbiol.github.io/bco/" target="_blank">mathbiol.github.io/bco</a>
+                <p style="font-size:22px">&nbsp;</p>
+                <iframe width="100%" height="550px" src="https://mathbiol.github.io/bco"></iframe>
+                </div>
+            </div>
+
+            <div id="webExe" class="step slide" data-x="0" data-y="-1500" data-z="3000" data-rotate="0">
+                <h4> <a href="#theEnd" style="color:red">bit.ly/webBCO</a></h4>
+                <div style="text-align:left;height:100%">
+                <a href="https://www.github.com/mathbiol/bco/" target="_blank">github.com/mathbiol/bco</a>
+                <p style="font-size:22px">&nbsp;</p>
+                <h2>Web execution</h2>
+                <p>try it yourself</p>
+                <hr>
+                <p style="font-size:22px">&nbsp;</p>
+                <li>Go to a domain you don't control, say <a href="https://www.washingtonpost.com" target="_blank">Washington Post</a>.</li>
+                <p style="font-size:22px">&nbsp;</p>
+                <li>Inject bco library: <span style="font-size:22px;color:green">$.getScript('https://mathbiol.github.io/bco/bco.js')</span></li>
+                <p style="font-size:22px">&nbsp;</p>
+                <li>Execute a BCO:<br><span style="font-size:22px;color:green">egfr = await BCO.webExe('https://mathbiol.github.io/bco/BCOexamples/demo.json')</span></li> 
+                <hr>
+                <h2>Discussion</h2>
+                <li>~3/4 of workflows not reproducible</li>
+                <li>APIs can be tested is environments we don't control</li>
+                <li>I was defeated by FDA this morning</li>
+                <li>Consumer-facing NGS is on FHIR <sup><a href="https://dceg.cancer.gov/research/who-we-study/cohorts/connect" target="_blank">*</sup></li> 
+                </div>
+            </div>
+
+            <div id="sandbox" class="step slide" data-x="-1000" data-y="-2300" data-z="3000" data-rotate="180">
+            <h4> <a href="#theEnd" style="color:red">bit.ly/appCommons</a></h4>
+            <h2>Sandbox</h2>
+            <div id="sandboxDiv">
+            <table cellpadding="10px">
+            <tr><td width="350px" id="tdLink" style="vertical-align:top">
+            <p>__________________________|</p>
+
+            </td><td width="80%" id="tdPage"><iframe id="sandboxIfr" src="" width="1200px" height="1200px" style="transform:scale(0.5);transform-origin:0% 0%"></iframe></td></tr>
+            </table>
+            <script src="sandboxLinks.js"></script>
+            </div> 
+            </div>           
+            
+            
+
+            <div id="theEnd" class="step" data-x="-100" data-y="-1500" data-z="2000" data-rotate-x="-40" data-rotate-y="-5" data-scale="7"></div>
+        </div>
+    <script>
+    if ("ontouchstart"in document.documentElement) {
+        document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+    }
+    //location.protocol="http:"
+    </script>
+
+    <script src="js/impress.js"></script>
+    <script>
+        impress().init();
+    </script>
+<!--
+
+    The `impress()` function also gives you access to the API that controls the presentation.
+
+    Just store the result of the call:
+
+        var api = impress();
+
+    and you will get three functions you can call:
+
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+
+-->
+</body></html>
