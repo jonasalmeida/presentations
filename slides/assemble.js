@@ -28,6 +28,9 @@ assemble=async(index='presentations.json')=>{
                 //newDiv.setAttribute('data-z',Math.round(Math.random()*2000-1000))
 
             }
+            let zoom = document.createElement('p')
+            zoom.innerHTML='<p align="right"><a href="#overview">&#x1F50E;</a></p>'
+            newDiv.insertBefore(zoom,newDiv.firstElementChild)
             div.appendChild(newDiv)
             console.log(c,i,j,newDiv.id,newDiv)
             c++
