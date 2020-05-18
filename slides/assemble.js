@@ -30,6 +30,9 @@ assemble=async(index='presentations.json')=>{
             }
             let zoom = document.createElement('p')
             zoom.innerHTML='<p align="right"><a href="#overview">&#x1F50E;</a></p>'
+            if(document.getElementById('zoomP')){
+                zoom=document.getElementById('zoomP').cloneNode(true)
+            }
             newDiv.insertBefore(zoom,newDiv.firstElementChild)
             div.appendChild(newDiv)
             console.log(c,i,j,newDiv.id,newDiv)
