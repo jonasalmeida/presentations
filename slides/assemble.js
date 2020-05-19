@@ -34,6 +34,7 @@ assemble=async(index='presentations.json')=>{
                 zoom=document.getElementById('zoomP').cloneNode(true)
             }
             newDiv.insertBefore(zoom,newDiv.firstElementChild)
+            newDiv.style.opacity=0.96
             div.appendChild(newDiv)
             console.log(c,i,j,newDiv.id,newDiv)
             c++
