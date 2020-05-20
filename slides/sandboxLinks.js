@@ -57,7 +57,7 @@ var sandboxData=[
         url:"https://bit.ly/coronaprog",
     },
     {
-        info:'mortalidade',
+        info:'Mortality',
         url:"https://bit.ly/mortalitytracker",
     }
 ];
