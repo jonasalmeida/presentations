@@ -27,6 +27,10 @@ var sandboxData=[
         url:"https://bit.ly/tcgatil"
     },
     {
+        info:"Nuclei",
+        url:"https://bit.ly/cells1000"
+    },
+    {
         info:"Tell Stories",
         url:"https://bit.ly/KMestimator"
     },
